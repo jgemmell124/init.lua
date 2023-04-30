@@ -1,5 +1,5 @@
-require("johnny.remap")
-require("johnny.packer")
+require("user.remap")
+require("user.packer")
 
 local opt=vim.opt
 

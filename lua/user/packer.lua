@@ -12,8 +12,11 @@ return require('packer').startup(function(use)
         -- or                            , branch = '1.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
     use('ThePrimeagen/harpoon')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -25,15 +28,26 @@ return require('packer').startup(function(use)
             run = function()
                 pcall(vim.cmd, 'MasonUpdate')
             end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
     }
-}
-use { "ellisonleao/gruvbox.nvim" }
+
+    use { "ellisonleao/gruvbox.nvim" }
+
+    use { "nvim-tree/nvim-tree.lua", 
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
+
 end)
 
