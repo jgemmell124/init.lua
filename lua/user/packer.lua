@@ -7,16 +7,21 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '1.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- Tree Sitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use ('p00f/nvim-ts-rainbow') 
 
-    use('ThePrimeagen/harpoon')
+    -- Harpoon
+    use 'ThePrimeagen/harpoon'
 
+    -- LSP (Lsp Zero)
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -37,9 +42,14 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
+    
+    -- COLOR THEMES --
+    -- Color theme (Gruv box)
+    use "ellisonleao/gruvbox.nvim"
+    -- Nightfox
+    use "EdenEast/nightfox.nvim"
 
-    use { "ellisonleao/gruvbox.nvim" }
-
+    -- Nvim Tree
     use { "nvim-tree/nvim-tree.lua", 
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
