@@ -7,7 +7,7 @@ lsp.ensure_installed({
     'lua_ls',
     'pyright',
     --'sumneko_lua',
-    'clangd',
+    'ccls',
 })
 
 local cmp = require('cmp')
