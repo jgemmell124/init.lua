@@ -6,6 +6,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    -- autopair brackets, quotes, etc
+    use 'windwp/nvim-autopairs'
 
     -- Telescope
     use {
