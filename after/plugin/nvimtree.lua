@@ -5,11 +5,19 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+
+-- Toggle the file tree on the right
+vim.keymap.set('n', '<leader>t', ":NvimTreeToggle<CR>")
+
+-- Focus the file tree on the right
+vim.keymap.set('n', '<leader>f', ":NvimTreeFocus<CR>")
+
+local tree = require("nvim-tree")
 -- empty setup using defaults
-require("nvim-tree").setup()
+--require("nvim-tree").setup()
 
 -- OR setup with some options
-require("nvim-tree").setup({
+tree.setup({
     sort_by = "case_sensitive",
     view = {
         width = 30,
@@ -21,3 +29,7 @@ require("nvim-tree").setup({
         dotfiles = true,
     },
 })
+
+
+
+
