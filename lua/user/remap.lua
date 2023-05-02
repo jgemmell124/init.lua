@@ -10,6 +10,13 @@ vim.g.mapleader = " "
 -- Go to previous item 
 keymap("n", "<leader>pv", vim.cmd.Ex)
 
+-- Normal --
+-- recenter move down
+keymap("n", "<C-d>", "<C-d>zz")
+
+-- recenter move up
+keymap("n", "<C-u>", "<C-u>zz")
+
 
 -- Insert --
 -- Press jk for faster escape  
