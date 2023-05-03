@@ -10,6 +10,17 @@ lsp.ensure_installed({
     'clangd',
 })
 
+require'lspconfig'.lua_ls.setup {
+    -- ... other configs
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+}
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({

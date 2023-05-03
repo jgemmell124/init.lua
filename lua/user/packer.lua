@@ -44,7 +44,6 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
-    
     -- COLOR THEMES --
     -- Color theme (Gruv box)
     use "ellisonleao/gruvbox.nvim"
