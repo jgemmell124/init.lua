@@ -39,4 +39,10 @@ require'nvim-treesitter.configs'.setup {
       -- termcolors = {} -- table of colour name strings
   },
 
+    -- comment strings
+    context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+    }
+
 }

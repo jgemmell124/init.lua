@@ -9,6 +9,10 @@ return require('packer').startup(function(use)
     -- autopair brackets, quotes, etc
     use 'windwp/nvim-autopairs'
 
+    -- commenting lines
+    use 'numToStr/Comment.nvim' -- Easily Comment stuff
+    use 'JoosepAlviste/nvim-ts-context-commentstring' -- treessitter context
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
