@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
 
     -- Tree Sitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use ('p00f/nvim-ts-rainbow') 
+    use ('p00f/nvim-ts-rainbow')
 
     -- Harpoon
     use 'ThePrimeagen/harpoon'
@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
     use "EdenEast/nightfox.nvim"
 
     -- Nvim Tree
-    use { "nvim-tree/nvim-tree.lua", 
+    use { "nvim-tree/nvim-tree.lua",
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
@@ -59,6 +59,5 @@ return require('packer').startup(function(use)
             require("nvim-tree").setup {}
         end
     }
-
 end)
 
