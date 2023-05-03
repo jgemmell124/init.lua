@@ -17,7 +17,12 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- Buffer, tabs, windows
-    use 'akinsho/bufferline.nvim'
+ -- using packer.nvim
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "*",
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
 
     -- Telescope
     use {
