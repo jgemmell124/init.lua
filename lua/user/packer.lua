@@ -16,6 +16,9 @@ return require('packer').startup(function(use)
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
 
+    -- Buffer, tabs, windows
+    use 'akinsho/bufferline.nvim'
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
