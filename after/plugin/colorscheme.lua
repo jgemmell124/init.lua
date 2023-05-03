@@ -12,17 +12,17 @@ end
 
 
 
-color_idx = 1
+local color_idx = 1
 
 -- ADD THEMES HERE --- 
-colors = {
+local colors = {
     "gruvbox",
     "nightfox",
     "nordfox",
     "duskfox",
 }
 
-num_colors = #(colors)
+local num_colors = #(colors)
 
 -- toggle thru install color schemes
 vim.keymap.set("n", "<C-q>", function()  
