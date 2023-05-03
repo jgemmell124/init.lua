@@ -5,7 +5,7 @@ end
 
 bufferline.setup {
     options = {
-        numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        -- numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
         close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
@@ -87,15 +87,14 @@ highlights = {
         --   },
         buffer_visible = {
             guifg = { attribute = "fg", highlight = "TabLine" },
-guibg = { attribute = "bg", highlight = "TabLine" },
-},
+            guibg = { attribute = "bg", highlight = "TabLine" },
+        },
 
         close_button = {
             guifg = { attribute = "fg", highlight = "TabLine" },
             guibg = { attribute = "bg", highlight = "TabLine" },
         },
-        buffer_close_icon = "",
-close_button_visible = {
+        close_button_visible = {
             guifg = { attribute = "fg", highlight = "TabLine" },
             guibg = { attribute = "bg", highlight = "TabLine" },
         },
@@ -110,7 +109,7 @@ close_button_visible = {
         },
         tab = {
             guifg = { attribute = "fg", highlight = "TabLine" },
-guibg = { attribute = "bg", highlight = "TabLine" },
+        guibg = { attribute = "bg", highlight = "TabLine" },
         },
         tab_close = {
             -- guifg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
@@ -122,8 +121,8 @@ guibg = { attribute = "bg", highlight = "TabLine" },
             guifg = { attribute = "fg", highlight = "TabLineSel" },
             guibg = { attribute = "bg", highlight = "TabLineSel" },
             gui = "italic",
-},
-duplicate_visible = {
+        },
+        duplicate_visible = {
             guifg = { attribute = "fg", highlight = "TabLine" },
             guibg = { attribute = "bg", highlight = "TabLine" },
             gui = "italic",
