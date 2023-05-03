@@ -13,6 +13,9 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim' -- Easily Comment stuff
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- treessitter context
 
+    -- Git signs
+    use 'lewis6991/gitsigns.nvim'
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
