@@ -1,5 +1,26 @@
 local lsp = require("lsp-zero")
-lsp.preset("recommended")
+local cmp_action = lsp.cmp_action()
+
+
+lsp.preset({
+    float_border = 'rounded',
+    call_servers = 'local',
+    configure_diagnostics = true,
+    setup_servers_on_start = true,
+    set_lsp_keymaps = {
+        preserve_mappings = false,
+        omit = {},
+    },
+    manage_nvim_cmp = {
+        set_sources = 'recommended',
+        set_basic_mappings = true,
+        set_extra_mappings = false,
+        use_luasnip = true,
+        set_format = true,
+        documentation_window = true,
+    },
+})
+
 lsp.ensure_installed({
     'tsserver',
     'eslint',
@@ -25,22 +46,44 @@ local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
-        ['<C-j>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-k>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
         ["<C-Space>"] = cmp.mapping.complete(),
-    })
+    }),
+
+    -- changing the order of fields so the icon is the first
+    fields = {'menu', 'abbr', 'kind'},
+
+    -- here is where the change happens
+    format = function(entry, item)
+        local menu_icon = {
+            nvim_lsp = 'λ',
+            luasnip = '⋗',
+            buffer = 'Ω',
+            path = '🖫',
+            nvim_lua = 'Π',
+        }
+
+        item.menu = menu_icon[entry.source.name]
+        return item
+    end,
 })
 
+
+
 lsp.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
+    suggest_lsp_servers = true,
 })
+
+
+lsp.set_sign_icons({
+    error = '✘',
+    warn = '▲',
+    hint = '⚑',
+    info = '»'
+})
+
 
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
