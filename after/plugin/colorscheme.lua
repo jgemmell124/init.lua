@@ -1,7 +1,7 @@
 
 -- COLOR SCHEMES
 
-function setColor(color)
+local function setColor(color)
     local status_ok, _ = pcall(vim.cmd, "colorscheme " .. color)
     if not status_ok then
         vim.notify("colorscheme" .. color .. " not found!")
@@ -17,6 +17,7 @@ local color_idx = 1
 -- ADD THEMES HERE --- 
 local colors = {
     "gruvbox",
+    "codedark",
     "nightfox",
     "nordfox",
     "duskfox",
@@ -25,12 +26,12 @@ local colors = {
 local num_colors = #(colors)
 
 -- toggle thru install color schemes
-vim.keymap.set("n", "<C-q>", function()  
-    color_idx = color_idx + 1 
+vim.keymap.set("n", "<C-q>", function()
+    color_idx = color_idx + 1
     if color_idx > num_colors then
         color_idx = 1
     end
-    new_color = colors[color_idx]
+    local new_color = colors[color_idx]
     setColor(new_color)
     end
 )

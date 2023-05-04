@@ -66,7 +66,9 @@ return require('packer').startup(function(use)
     use "ellisonleao/gruvbox.nvim"
     -- Nightfox
     use "EdenEast/nightfox.nvim"
-
+    -- vscode theme
+    use "tomasiser/vim-code-dark"
+    --
     -- Nvim Tree
     use { "nvim-tree/nvim-tree.lua",
         requires = {
