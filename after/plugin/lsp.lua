@@ -23,7 +23,6 @@ lsp.preset({
 
 lsp.ensure_installed({
     'tsserver',
-    'eslint',
     'rust_analyzer',
     'lua_ls',
     'pyright',
