@@ -15,11 +15,14 @@ keymap("n", "<leader>pv", vim.cmd.Ex)
 -- Normal --
 -- recenter move down
 keymap("n", "<C-d>", "<C-d>zz")
-
 -- recenter move up
 keymap("n", "<C-u>", "<C-u>zz")
-
-
+-- Navigate buffers
+-- switch between most recent buffers
+keymap("n", "<leader><Tab>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<A-p>", ":bprevious<CR>", opts)
 -- Insert --
 -- Press jk for faster escape  
 keymap("i", "jk", "<ESC>")
@@ -33,6 +36,3 @@ keymap("v", ">", ">gv")
 -- Prevent vim from replacing paste buffer
 keymap("v", "p", '"_dP')
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
