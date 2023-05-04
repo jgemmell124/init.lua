@@ -1,4 +1,4 @@
-require("user.remap")
+require("user.map")
 require("user.packer")
 
 local opt=vim.opt
