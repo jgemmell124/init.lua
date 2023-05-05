@@ -19,7 +19,7 @@ keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 -- Navigate buffers
 -- switch between most recent buffers
-keymap("n", "<leader><Tab>", ":bprevious<CR>", opts)
+keymap("n", "<leader><Tab>", "<C-^>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-p>", ":bprevious<CR>", opts)
