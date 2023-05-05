@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     -- autopair brackets, quotes, etc
-    use 'windwp/nvim-autopairs'
+   -- use 'windwp/nvim-autopairs'
 
     -- commenting lines
     use 'numToStr/Comment.nvim' -- Easily Comment stuff
@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
 
     -- Tree Sitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use ('p00f/nvim-ts-rainbow')
+    use ('mrjones2014/nvim-ts-rainbow')
     use("nvim-treesitter/nvim-treesitter-context");
 
     -- Harpoon
@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
     -- LSP (Lsp Zero)
     use {
         'VonHeikemen/lsp-zero.nvim',
-        -- branch = 'v2.x',
+        branch = 'v2.x',
         requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required

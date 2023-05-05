@@ -21,3 +21,5 @@ opt.showcmd=true
 -- Show matching brackets
 opt.showmatch=false -- true
 
+ 
+

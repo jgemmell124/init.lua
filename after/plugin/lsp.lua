@@ -87,10 +87,10 @@ cmp.setup({
       -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.kind = string.format('%s %s ', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        nvim_lsp = "",
-        luasnip = "",
-        buffer = "",
-        path = "",
+        nvim_lsp = "[LSP]",
+        luasnip = "[Snip]",
+        buffer = "[BUFF]",
+        path = "[PATH]",
       })[entry.source.name]
       --[[ vim_item.menu = ({
         nvim_lsp = "[LSP]",
@@ -142,7 +142,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
-
 vim.diagnostic.config({
     virtual_text = true
 })
