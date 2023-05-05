@@ -55,5 +55,4 @@ vim.keymap.set("n", "<C-q>", function()
     end
 )
 
-setColor(default_color)
--- ColorMyPencils()
+vim.cmd.colorscheme(default_color)
