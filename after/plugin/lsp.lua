@@ -77,10 +77,9 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
     }),
-
     formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
