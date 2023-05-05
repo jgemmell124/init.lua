@@ -25,7 +25,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-p>", ":bprevious<CR>", opts)
 -- new line without insert mode
 keymap("n", "<leader><Enter>", "o<Esc>")
-
+keymap("n", "<C-n>", "o<Esc>")
 
 -- Insert --
 -- Press jk for faster escape  

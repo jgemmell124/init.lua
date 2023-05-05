@@ -19,5 +19,5 @@ opt.colorcolumn="80"
 opt.showcmd=true
 
 -- Show matching brackets
-opt.showmatch=true
+opt.showmatch=false -- true
 
