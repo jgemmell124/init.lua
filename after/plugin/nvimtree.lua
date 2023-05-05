@@ -6,17 +6,12 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 
--- Toggle the file tree on the right
-vim.keymap.set('n', '<leader>t', ":NvimTreeToggle<CR>")
 
--- Focus the file tree on the right
-vim.keymap.set('n', '<leader>f', ":NvimTreeFocus<CR>")
+-- Toggle the file tree 
+vim.keymap.set('n', '<leader>f', ":NvimTreeToggle<CR>", {silent = true})
 
 local tree = require("nvim-tree")
--- empty setup using defaults
---require("nvim-tree").setup()
 
--- OR setup with some options
 tree.setup({
     sort_by = "case_sensitive",
     view = {
