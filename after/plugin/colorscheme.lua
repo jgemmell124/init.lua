@@ -1,5 +1,8 @@
 
 -- COLOR SCHEMES
+require('rose-pine').setup({
+    disable_background = true
+})
 
 local function setColor(color)
     local status_ok, _ = pcall(vim.cmd, "colorscheme " .. color)
@@ -7,6 +10,11 @@ local function setColor(color)
         vim.notify("colorscheme" .. color .. " not found!")
         return
     end
+    -- Remove background coloe
+    require('gitsigns').setup()
+    vim.cmd("highlight GitSignsAdd guibg=NONE")
+    vim.cmd("highlight GitSignsChange guibg=NONE")
+    vim.cmd("highlight GitSignsDelete guibg=NONE")
     vim.notify("Theme set to " .. color)
 end
 
@@ -19,10 +27,6 @@ function ColorMyPencils(color)
 
 end
 
-
-require('rose-pine').setup({
-    disable_background = true
-})
 
 local color_idx = 1
 
