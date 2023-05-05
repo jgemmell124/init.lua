@@ -10,14 +10,27 @@ local function setColor(color)
     vim.notify("Theme set to " .. color)
 end
 
+function ColorMyPencils(color) 
+	color = color or "rose-pine"
+	vim.cmd.colorscheme(color)
 
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
+
+require('rose-pine').setup({
+    disable_background = true
+})
 
 local color_idx = 1
 
 -- ADD THEMES HERE --- 
 local colors = {
-    "gruvbox",
     "codedark",
+    "gruvbox",
+    "rose-pine",
     "nightfox",
     "nordfox",
     "duskfox",
@@ -33,6 +46,8 @@ vim.keymap.set("n", "<C-q>", function()
     end
     local new_color = colors[color_idx]
     setColor(new_color)
+    -- ColorMyPencils(new_color)
     end
 )
 
+-- ColorMyPencils()
