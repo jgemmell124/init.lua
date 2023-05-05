@@ -4,13 +4,14 @@ require('rose-pine').setup({
     disable_background = true
 })
 
+
 local function setColor(color)
     local status_ok, _ = pcall(vim.cmd, "colorscheme " .. color)
     if not status_ok then
         vim.notify("colorscheme" .. color .. " not found!")
         return
     end
-    -- Remove background coloe
+    -- Remove background color
     require('gitsigns').setup()
     vim.cmd("highlight GitSignsAdd guibg=NONE")
     vim.cmd("highlight GitSignsChange guibg=NONE")
@@ -18,8 +19,8 @@ local function setColor(color)
     vim.notify("Theme set to " .. color)
 end
 
-function ColorMyPencils(color) 
-	color = color or "rose-pine"
+function ColorMyPencils(color)
+	color = color or "codedark"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -30,6 +31,7 @@ end
 local color_idx = 1
 
 -- ADD THEMES HERE --- 
+local default_color = "codedark"
 local colors = {
     "codedark",
     "gruvbox",
@@ -53,4 +55,5 @@ vim.keymap.set("n", "<C-q>", function()
     end
 )
 
+setColor(default_color)
 -- ColorMyPencils()
