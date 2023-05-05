@@ -7,8 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     -- autopair brackets, quotes, etc
-   -- use 'windwp/nvim-autopairs'
-
+    use 'windwp/nvim-autopairs'
     -- commenting lines
     use 'numToStr/Comment.nvim' -- Easily Comment stuff
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- treessitter context

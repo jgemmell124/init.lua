@@ -27,7 +27,6 @@ function ColorMyPencils(color)
 
 end
 
-
 local color_idx = 1
 
 -- ADD THEMES HERE --- 
