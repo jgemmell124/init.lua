@@ -80,16 +80,16 @@ vim.diagnostic.config({
 
 local kind_icons = {
     Text = "󰀬",
-    Method = "m",
+    Method = "",
     Function = "󰊕",
     Constructor = "",
     Field = "",
     Variable = "",
     Class = "",
     Interface = "",
-    Module = "",
+    Module = "󰅩",
     Property = "",
-    Unit = "",
+    Unit = "",
     Value = "󰎠",
     Enum = "",
     Keyword = "󰌋",
@@ -105,8 +105,8 @@ local kind_icons = {
     Operator = "",
     TypeParameter = "",
 }
--- find more here: https://www.nerdfonts.com/cheat-sheet
 
+-- find more here: https://www.nerdfonts.com/cheat-sheet
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
@@ -117,13 +117,15 @@ cmp.setup({
         ["<C-Space>"] = cmp.mapping.complete(),
     }),
     formatting = {
-        fields = { "abbr", "menu", "kind"},
+        fields = {"abbr", "kind", "menu",},
+        --[[ fields = {"kind", "abbr", "menu"}, ]]
         format = function(entry, vim_item)
             local lspkind_ok, lspkind  = pcall(require, "lspkind")
             if not lspkind_ok then
-                vim_item.kind = string.format('%s %s ',
+                vim_item.kind = string.format('%s %s',
                                                 kind_icons[vim_item.kind],
                                                 vim_item.kind)
+                --[[ vim_item.kind = string.format('%s', kind_icons[vim_item.kind]) ]]
                 vim_item.menu = ({
                     nvim_lsp = "[LSP]",
                     luasnip = "[Snip]",
