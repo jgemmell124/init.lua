@@ -10,14 +10,14 @@ lsp.preset({
         preserve_mappings = false,
         omit = {},
     },
-    manage_nvim_cmp = {
+    --[[ manage_nvim_cmp = {
         set_sources = 'recommended',
         set_basic_mappings = true,
         set_extra_mappings = false,
         use_luasnip = true,
         set_format = true,
         documentation_window = true,
-    },
+    }, ]]
 })
 
 
@@ -83,7 +83,6 @@ cmp.setup({
     formatting = {
     fields = { "abbr", "menu", "kind"},
     format = function(entry, vim_item)
-      -- Kind icons
       -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.kind = string.format('%s %s ', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
