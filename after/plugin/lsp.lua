@@ -41,6 +41,36 @@ require'lspconfig'.lua_ls.setup {
     }
 }
 
+--- cmp settins --- 
+local kind_icons = {
+  Text = "󰀬",
+  Method = "m",
+  Function = "󰊕",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "",
+  Interface = "",
+  Module = "",
+  Property = "",
+  Unit = "",
+  Value = "󰎠",
+  Enum = "",
+  Keyword = "󰌋",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
+-- find more here: https://www.nerdfonts.com/cheat-sheet
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
@@ -51,24 +81,21 @@ cmp.setup({
         ["<C-Space>"] = cmp.mapping.complete(),
     }),
 
-    -- changing the order of fields so the icon is the first
-    fields = {'menu', 'abbr', 'kind'},
-
-    -- here is where the change happens
-    format = function(entry, item)
-        local menu_icon = {
-            nvim_lsp = 'λ',
-            luasnip = '⋗',
-            buffer = 'Ω',
-            path = '🖫',
-            nvim_lua = 'Π',
-        }
-
-        item.menu = menu_icon[entry.source.name]
-        return item
+    formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      -- Kind icons
+      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+      vim_item.menu = ({
+        nvim_lsp = "[LSP]",
+        luasnip = "[Snippet]",
+        buffer = "[Buffer]",
+        path = "[Path]",
+      })[entry.source.name]
+      return vim_item
     end,
-})
-
+  },})
 
 
 lsp.set_preferences({
