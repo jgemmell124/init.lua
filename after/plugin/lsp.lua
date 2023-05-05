@@ -1,5 +1,4 @@
 local lsp = require("lsp-zero")
-local cmp_action = lsp.cmp_action()
 
 
 lsp.preset({
@@ -21,6 +20,7 @@ lsp.preset({
     },
 })
 
+
 lsp.ensure_installed({
     'tsserver',
     'eslint',
@@ -41,7 +41,7 @@ require'lspconfig'.lua_ls.setup {
     }
 }
 
---- cmp settins --- 
+--- cmp icon settings --- 
 local kind_icons = {
   Text = "󰀬",
   Method = "m",
@@ -94,13 +94,23 @@ cmp.setup({
       })[entry.source.name]
       return vim_item
     end,
-  },})
-
+  },
+    window = {
+        documentation = {
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        },
+    },
+    experimental = {
+        ghost_text = true,
+    },
+    --[[ view = {
+        entries = "native"
+    } ]]
+})
 
 lsp.set_preferences({
     suggest_lsp_servers = true,
 })
-
 
 lsp.set_sign_icons({
     error = '✘',

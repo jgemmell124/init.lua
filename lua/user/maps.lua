@@ -23,6 +23,10 @@ keymap("n", "<leader><Tab>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-p>", ":bprevious<CR>", opts)
+-- new line without insert mode
+keymap("n", "<leader><Enter>", "o<Esc>")
+
+
 -- Insert --
 -- Press jk for faster escape  
 keymap("i", "jk", "<ESC>")
@@ -36,3 +40,7 @@ keymap("v", ">", ">gv")
 -- Prevent vim from replacing paste buffer
 keymap("v", "p", '"_dP')
 
+-- move a chunk of code
+--
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
