@@ -147,6 +147,9 @@ cmp.setup({
     experimental = {
         ghost_text = true,
     },
+    --[[ sources = {
+        { name = 'nvim_lsp_signature_help' },
+    }, ]]
     --[[ view = {
         entries = "native"
     } ]]
