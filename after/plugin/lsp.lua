@@ -73,10 +73,9 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
-
 --- CMP SETUP --- 
-
---- cmp icon settings --- 
+-- custom ghost highlight group
+vim.api.nvim_set_hl(0, 'Ghost', { italic=true, fg='#676767' }) --- cmp icon settings --- 
 
 local kind_icons = {
     Text = "󰀬",
@@ -144,8 +143,9 @@ cmp.setup({
             border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
         },
     },
+     
     experimental = {
-        ghost_text = true,
+        ghost_text = { hl_group = "Ghost" },
     },
     --[[ sources = {
         { name = 'nvim_lsp_signature_help' },

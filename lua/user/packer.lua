@@ -12,6 +12,9 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim' -- Easily Comment stuff
     use 'JoosepAlviste/nvim-ts-context-commentstring' -- treessitter context
 
+    -- Highlighting
+    use 'rrethy/vim-illuminate'
+
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
 
