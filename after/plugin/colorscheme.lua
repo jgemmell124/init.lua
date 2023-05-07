@@ -1,8 +1,9 @@
 
 -- COLOR SCHEMES
 require('rose-pine').setup({
-    disable_background = true
+    disable_background = false
 })
+
 
 
 local function setColor(color)
@@ -36,6 +37,9 @@ local colors = {
     "codedark",
     "gruvbox",
     "rose-pine",
+    "rose-pine-dawn",
+    "rose-pine-moon",
+    "rose-pine-main",
     "nightfox",
     "nordfox",
     "duskfox",
