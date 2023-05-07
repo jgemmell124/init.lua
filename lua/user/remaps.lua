@@ -21,6 +21,14 @@ keymap("n", "<leader><Tab>", "<C-^>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 -- Swtich to buffer on left
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- window maps -- 
+keymap("n", "<leader>ss", "<C-w>v")
+keymap("n", "<leader>sh", "<C-w><C-s>")
+-- keymap("n", "<leader>qq", ":q<CR>")
+keymap("n", "<leader>j", "<C-w>j")
+keymap("n", "<leader>k", "<C-w>k")
+keymap("n", "<leader>h", "<C-w>h")
+keymap("n", "<leader>l", "<C-w>l")
 -- new line without insert mode
 keymap("n", "<leader><Enter>", "o<Esc>")
 keymap("n", "<C-n>", "o<Esc>")
