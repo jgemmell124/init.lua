@@ -27,7 +27,9 @@ keymap("n", "<C-n>", "o<Esc>")
 keymap("n", "<Tab-CR>", "o<Esc>")
 -- Select All
 keymap("n", "<C-a>", "gg<S-v>G")
-
+-- Move a chunk of code  
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 --------------------
 ------ Insert ------
 --------------------
@@ -42,6 +44,6 @@ keymap("v", ">", ">gv")
 -- Prevent vim from replacing paste buffer
 keymap("v", "p", '"_dP')
 -- move a chunk of code
-keymap("v", "<A-k>", ":m .-2<CR>==<S-v>", opts)
-keymap("v", "<A-j>", ":m .+1<CR>==<S-v>", opts)
+keymap("v", "<A-j>", ":m .'>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
