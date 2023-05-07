@@ -65,14 +65,3 @@ keymap("v", "p", '"_dP')
 -- move a chunk of code
 keymap("v", "<A-j>", ":m .'>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
-fda
-
-fdsfds
-
-fds
-
-fds
-
-fd
-
-fds
