@@ -55,7 +55,7 @@ vim.keymap.set("n", "<C-q>", function()
     end
 )
 
--- vim.cmd.colorscheme(default_color)
+vim.cmd.colorscheme(default_color)
 -- Remove background color
 -- require('gitsigns').setup()
 --[[ vim.cmd("highlight GitSignsAdd guibg=none") ]]

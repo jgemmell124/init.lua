@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
     -- Color theme (Gruv box)
     use "ellisonleao/gruvbox.nvim"
     -- Nightfox
-    use "EdenEast/nightfox.nvim"
+    use "EdenEast/nightfox.nvim" -- Packer
     -- vscode theme
     use "tomasiser/vim-code-dark"
     use({
