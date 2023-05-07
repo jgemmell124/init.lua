@@ -4,7 +4,8 @@ require('rose-pine').setup({
     disable_background = false
 })
 
-
+--Lua:
+vim.g.material_style = "darker"
 
 local function setColor(color)
     local status_ok, _ = pcall(vim.cmd, "colorscheme " .. color)
@@ -44,6 +45,7 @@ local colors = {
     "nordfox",
     "duskfox",
     "carbonfox",
+    "material",
 }
 
 local num_colors = #(colors)
