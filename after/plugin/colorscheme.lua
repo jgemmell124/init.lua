@@ -31,7 +31,7 @@ end
 local color_idx = 1
 
 -- ADD THEMES HERE --- 
-local default_color = "nightfox"
+local default_color = "nordfox"
 local colors = {
     "codedark",
     "gruvbox",
@@ -39,6 +39,7 @@ local colors = {
     "nightfox",
     "nordfox",
     "duskfox",
+    "carbonfox",
 }
 
 local num_colors = #(colors)
