@@ -31,7 +31,7 @@ end
 local color_idx = 1
 
 -- ADD THEMES HERE --- 
-local default_color = "nordfox"
+local default_color = "nightfox"
 local colors = {
     "codedark",
     "gruvbox",
@@ -55,9 +55,9 @@ vim.keymap.set("n", "<C-q>", function()
     end
 )
 
-vim.cmd.colorscheme(default_color)
+-- vim.cmd.colorscheme(default_color)
 -- Remove background color
 -- require('gitsigns').setup()
-vim.cmd("highlight GitSignsAdd guibg=none")
-vim.cmd("highlight GitSignsChange guibg=none")
-vim.cmd("highlight GitSignsDelete guibg=none")
+--[[ vim.cmd("highlight GitSignsAdd guibg=none") ]]
+--[[ vim.cmd("highlight GitSignsChange guibg=none") ]]
+--[[ vim.cmd("highlight GitSignsDelete guibg=none") ]]
