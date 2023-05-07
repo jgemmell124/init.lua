@@ -19,8 +19,10 @@ keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "<leader><Tab>", "<C-^>", opts)
 -- Swtich to buffer on right
 keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
 -- Swtich to buffer on left
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 -- window maps -- 
 keymap("n", "<leader>sv", "<C-w>v")
 keymap("n", "<leader>ss", "<C-w><C-s>")
@@ -34,6 +36,10 @@ keymap("n", "<leader>sj", "<C-w>J")
 keymap("n", "<leader>sk", "<C-w>K")
 keymap("n", "<leader>sh", "<C-w>H")
 keymap("n", "<leader>sl", "<C-w>L")
+keymap("n", "<C-left>", "<C-w><")
+keymap("n", "<C-right>", "<C-w>>")
+keymap("n", "<C-up>", "<C-w>+")
+keymap("n", "<C-down>", "<C-w>-")
 -- new line without insert mode
 keymap("n", "<leader><Enter>", "o<Esc>")
 keymap("n", "<C-n>", "o<Esc>")
