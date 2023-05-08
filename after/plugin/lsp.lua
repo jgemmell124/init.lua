@@ -23,7 +23,7 @@ lsp.preset({
 
 local servers = {
     'tsserver',
-    'eslint',
+--    'eslint',
     'rust_analyzer',
     'lua_ls',
     'pyright',
@@ -74,12 +74,6 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
-
-for _, p in ipairs(servers) do
-  require'lspconfig'[p].setup {
-        autostart = false
-      }
-end
 
 --- CMP SETUP --- 
 -- custom ghost highlight group
