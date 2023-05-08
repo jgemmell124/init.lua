@@ -21,14 +21,16 @@ lsp.preset({
 })
 
 
-lsp.ensure_installed({
+local servers = {
     'tsserver',
     'eslint',
     'rust_analyzer',
     'lua_ls',
     'pyright',
     'clangd',
-})
+}
+
+lsp.ensure_installed(servers)
 
 require'lspconfig'.lua_ls.setup {
     -- ... other configs
@@ -73,9 +75,15 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+for _, p in ipairs(servers) do
+  require'lspconfig'[p].setup {
+        autostart = false
+      }
+end
+
 --- CMP SETUP --- 
 -- custom ghost highlight group
-vim.api.nvim_set_hl(0, 'Ghost', { italic=true, fg='#676767' }) --- cmp icon settings --- 
+vim.api.nvim_set_hl(0, 'GhostAUTOCMP', { italic=true, fg='#676767' }) --- cmp icon settings --- 
 
 local kind_icons = {
     Text = "󰀬",
@@ -145,7 +153,7 @@ cmp.setup({
     },
      
     experimental = {
-        ghost_text = { hl_group = "Ghost" },
+        ghost_text = { hl_group = "GhostAUTOCMP" },
     },
     --[[ sources = {
         { name = 'nvim_lsp_signature_help' },
