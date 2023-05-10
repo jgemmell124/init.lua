@@ -30,8 +30,8 @@ require'nvim-treesitter.configs'.setup {
     indent = { enable = true, disable = { "yaml" } },
 
     -- Matching parens with colors (nvim-ts-rainbow)
-    rainbow = {
-        enable = true,
+    --[[ rainbow = {
+        enable = false, -- true to turn it on
         -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
         extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
         max_file_lines = nil, -- Do not enable for files with more than n lines, int
@@ -50,11 +50,11 @@ require'nvim-treesitter.configs'.setup {
             'TSRainbowViolet',
             'TSRainbowCyan'
         },
-    },
+    }, ]]
 
     -- comment strings
     context_commentstring = {
-        enable = false,
+        enable = true,
         enable_autocmd = true,
     }
 }
