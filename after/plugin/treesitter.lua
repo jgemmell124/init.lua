@@ -43,5 +43,5 @@ require'nvim-treesitter.configs'.setup {
     context_commentstring = {
         enable = false,
         enable_autocmd = true,
-    }
+ .   }
 }
