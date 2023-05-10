@@ -40,18 +40,13 @@ local color_idx = 1
 vim.g.gruvbox_italic=1
 
 -- ADD THEMES HERE --- 
-local default_color = "onedark"
+local default_color = "gruvbox"
 local colors = {
     "gruvbox",
     "codedark",
     "rose-pine",
-    --[[ "rose-pine-dawn", ]]
-    --[[ "rose-pine-moon", ]]
-    --[[ "rose-pine-main", ]]
     "nightfox",
     "nordfox",
-    "duskfox",
-    "carbonfox",
     "material",
     "onedark",
 }
