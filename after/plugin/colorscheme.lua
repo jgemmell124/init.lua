@@ -3,6 +3,10 @@
 require('rose-pine').setup({
     disable_background = false
 })
+-- Lua
+require('onedark').setup {
+    style = 'warmer'
+}
 
 --Lua:
 vim.g.material_style = "darker"
@@ -33,9 +37,10 @@ end
 local color_idx = 1
 
 --let g:gruvbox_italic=1
+vim.g.gruvbox_italic=1
 
 -- ADD THEMES HERE --- 
-local default_color = "gruvbox"
+local default_color = "onedark"
 local colors = {
     "gruvbox",
     "codedark",
@@ -48,6 +53,7 @@ local colors = {
     "duskfox",
     "carbonfox",
     "material",
+    "onedark",
 }
 
 local num_colors = #(colors)
