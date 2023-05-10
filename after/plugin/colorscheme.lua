@@ -32,15 +32,17 @@ end
 
 local color_idx = 1
 
+--let g:gruvbox_italic=1
+
 -- ADD THEMES HERE --- 
-local default_color = "nordfox"
+local default_color = "gruvbox"
 local colors = {
-    "codedark",
     "gruvbox",
+    "codedark",
     "rose-pine",
-    "rose-pine-dawn",
-    "rose-pine-moon",
-    "rose-pine-main",
+    --[[ "rose-pine-dawn", ]]
+    --[[ "rose-pine-moon", ]]
+    --[[ "rose-pine-main", ]]
     "nightfox",
     "nordfox",
     "duskfox",

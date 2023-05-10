@@ -68,6 +68,7 @@ return require('packer').startup(function(use)
     -- COLOR THEMES --
     -- Color theme (Gruv box)
     use "ellisonleao/gruvbox.nvim"
+
     -- Nightfox
     use "EdenEast/nightfox.nvim" -- Packer
     use 'marko-cerovac/material.nvim'

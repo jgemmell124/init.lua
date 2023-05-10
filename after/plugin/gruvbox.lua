@@ -1,6 +1,6 @@
 -- setup must be called before loading the colorscheme
 -- Default options:
-require("gruvbox").setup({
+--[[ require("gruvbox").setup({
     undercurl = true,
     underline = true,
     bold = true,
@@ -21,8 +21,8 @@ require("gruvbox").setup({
     overrides = {},
     dim_inactive = false,
     transparent_mode = false,
-})
+}) ]]
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--[[ vim.api.nvim_set_hl(0, "Normal", { bg = "#343434" }) ]]
+--[[ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#343434" }) ]]
 -- vim.cmd("colorscheme gruvbox")
