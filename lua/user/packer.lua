@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
 
     -- Tree Sitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use ('mrjones2014/nvim-ts-rainbow')
+    use('HiPhish/nvim-ts-rainbow2')
     use("nvim-treesitter/nvim-treesitter-context");
 
     -- Harpoon
