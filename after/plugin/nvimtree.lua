@@ -18,7 +18,7 @@ tree.setup({
     },
     renderer = {
         group_empty = true,
-        root_folder_label = false,
+--        root_folder_label = false,
     },
     filters = {
         custom = {".git/*"}, -- Ignore . git directory

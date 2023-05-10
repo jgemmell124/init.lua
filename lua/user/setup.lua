@@ -18,3 +18,11 @@ opt.showcmd=true
 
 -- Show matching brackets
 opt.showmatch=false -- true
+
+opt.scrolloff=8
+
+opt.updatetime=50
+
+opt.incsearch=true
+
+vim.g.mapleader=" "

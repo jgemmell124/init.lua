@@ -47,8 +47,16 @@ keymap("n", "<Tab-CR>", "o<Esc>")
 -- Select All
 keymap("n", "<C-a>", "gg<S-v>G")
 -- Move a chunk of code  
-keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-j>", ":m +1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+-- Quick Fix
+keymap("n", "<C-k>", "<cmd>cnext<CR>zz")
+keymap("n", "<C-j>", "<cmd>cprev<CR>zz")
+keymap("n", "<leader>k", "<cmd>lnext<CR>zz")
+keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+keymap("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 --------------------
 ------ Insert ------
 --------------------
@@ -63,5 +71,5 @@ keymap("v", ">", ">gv")
 -- Prevent vim from replacing paste buffer
 keymap("v", "p", '"_dP')
 -- move a chunk of code
-keymap("v", "<A-j>", ":m .'>+1<CR>gv=gv", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
