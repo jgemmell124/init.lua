@@ -28,6 +28,12 @@ return require('packer').startup(function(use)
     -- toggle terminal
     use 'akinsho/toggleterm.nvim'
 
+    -- Lua Line 
+    use({
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    })
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
