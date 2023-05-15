@@ -1,4 +1,4 @@
-vim.cmd [[highlight IndentBlanklineIndent guifg=#5C5C5C gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent guifg=#474747 gui=nocombine]]
 
 vim.opt.list = false
 
