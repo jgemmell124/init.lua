@@ -2,10 +2,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
--- vim.opt.termguicolors = true
-
-
 -- Toggle the file tree 
 vim.keymap.set('n', '<leader>f', ":NvimTreeToggle<CR>", {silent = true})
 
@@ -18,7 +14,6 @@ tree.setup({
     },
     renderer = {
         group_empty = true,
---        root_folder_label = false,
     },
     filters = {
         custom = {".git/*"}, -- Ignore . git directory

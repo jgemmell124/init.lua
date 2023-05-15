@@ -29,29 +29,6 @@ require'nvim-treesitter.configs'.setup {
     },
     indent = { enable = true, disable = { "yaml" } },
 
-    -- Matching parens with colors (nvim-ts-rainbow)
-    --[[ rainbow = {
-        enable = false, -- true to turn it on
-        -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-        max_file_lines = nil, -- Do not enable for files with more than n lines, int
-        -- colors = {}, -- table of hex strings
-        -- termcolors = {} -- table of colour name strings
-        -- Which query to use for finding delimiters
-        query = 'rainbow-parens',
-        -- Highlight the entire buffer all at once
-        strategy = require('ts-rainbow').strategy.global,
-        hlroups = {
-            'TSRainbowGreen',
-            'TSRainbowBlue',
-            'TSRainbowRed',
-            'TSRainbowYellow',
-            'TSRainbowOrange',
-            'TSRainbowViolet',
-            'TSRainbowCyan'
-        },
-    }, ]]
-
     -- comment strings
     context_commentstring = {
         enable = true,

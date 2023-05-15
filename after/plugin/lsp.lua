@@ -10,20 +10,11 @@ lsp.preset({
         preserve_mappings = false,
         omit = {},
     },
-    --[[ manage_nvim_cmp = {
-        set_sources = 'recommended',
-        set_basic_mappings = true,
-        set_extra_mappings = false,
-        use_luasnip = true,
-        set_format = true,
-        documentation_window = true,
-    }, ]]
 })
 
 
 local servers = {
     'tsserver',
---    'eslint',
     'rust_analyzer',
     'lua_ls',
     'pyright',
@@ -57,7 +48,6 @@ lsp.set_sign_icons({
 
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
-
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
@@ -149,10 +139,4 @@ cmp.setup({
     experimental = {
         ghost_text = { hl_group = "GhostAUTOCMP" },
     },
-    --[[ sources = {
-        { name = 'nvim_lsp_signature_help' },
-    }, ]]
-    --[[ view = {
-        entries = "native"
-    } ]]
 })

@@ -48,6 +48,18 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('HiPhish/nvim-ts-rainbow2')
     use("nvim-treesitter/nvim-treesitter-context");
+	use("nvim-treesitter/playground")
+
+    -- Nvim Tree
+    use { "nvim-tree/nvim-tree.lua",
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+            'kyazdani42/nvim-web-devicons'
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
 
     -- Harpoon
     use 'ThePrimeagen/harpoon'
@@ -89,16 +101,6 @@ return require('packer').startup(function(use)
 	  as = 'rose-pine',
     })
 
-    -- Nvim Tree
-    use { "nvim-tree/nvim-tree.lua",
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-            'kyazdani42/nvim-web-devicons'
-        },
-        config = function()
-            require("nvim-tree").setup {}
-        end
-    }
 end)
 
 
