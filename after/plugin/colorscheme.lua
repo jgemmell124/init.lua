@@ -40,7 +40,7 @@ local color_idx = 1
 vim.g.gruvbox_italic=1
 
 -- ADD THEMES HERE --- 
-local default_color = "gruvbox"
+local default_color = "onedark"
 local colors = {
     "gruvbox",
     "codedark",
@@ -53,7 +53,7 @@ local colors = {
 
 local num_colors = #(colors)
 
--- toggle thru install color schemes
+--[[ -- toggle thru install color schemes
 vim.keymap.set("n", "<C-q>", function()
     color_idx = color_idx + 1
     if color_idx > num_colors then
@@ -63,9 +63,9 @@ vim.keymap.set("n", "<C-q>", function()
     setColor(new_color)
     -- ColorMyPencils(new_color)
     end
-)
+) ]]
 
-vim.cmd.colorscheme(default_color)
+-- vim.cmd.colorscheme(default_color)
 -- Remove background color
 -- require('gitsigns').setup()
 --[[ vim.cmd("highlight GitSignsAdd guibg=none") ]]
