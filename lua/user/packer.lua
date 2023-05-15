@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
     -- Highlighting
     use 'rrethy/vim-illuminate'
 
+    -- Line Indents
+    use 'lukas-reineke/indent-blankline.nvim'
+
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
 
