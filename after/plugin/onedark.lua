@@ -32,7 +32,7 @@ require('onedark').setup  {
 		["@conditional"] = {fmt = 'italic'},
 		["@keyword."] = {fmt = 'italic'},
 		["@constant"] = {fmt = 'italic'},
-		["@type.builtin"] = {fg ='#6ba1ff', fmt = 'italic'},
+		["@type.builtin"] = {fg = '#98C1D9', fmt = 'italic'},
 	}, -- Override highlight groups   
 
     -- Plugins Config --
