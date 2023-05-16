@@ -11,7 +11,7 @@ opt.smartindent=true
 
 opt.termguicolors=true
 
-opt.colorcolumn='80'
+--opt.colorcolumn='80'
 opt.wrap=false
 
 -- Show partial commands
