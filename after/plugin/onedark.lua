@@ -28,7 +28,12 @@ require('onedark').setup  {
 
     -- Custom Highlights --
     colors = {}, -- Override default colors
-    highlights = {}, -- Override highlight groups
+    highlights = {
+		["@conditional"] = {fmt = 'italic'},
+		["@keyword."] = {fmt = 'italic'},
+		["@constant"] = {fmt = 'italic'},
+		["@type.builtin"] = {fg ='#6ba1ff', fmt = 'italic'},
+	}, -- Override highlight groups   
 
     -- Plugins Config --
     diagnostics = {
