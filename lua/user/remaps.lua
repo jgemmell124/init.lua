@@ -58,6 +58,10 @@ keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 keymap("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- Open Mardown
+keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
+keymap("n", "<leader>mc", ":MarkdownPreviewStop<CR>", opts)
+
 --------------------
 ------ Insert ------
 --------------------
