@@ -11,7 +11,6 @@ tree.setup({
     sort_by = "case_sensitive",
     view = {
         width = 30,
-		hide_root_foler = true,
     },
     renderer = {
         group_empty = true,
