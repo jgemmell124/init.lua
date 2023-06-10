@@ -26,19 +26,23 @@ keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 -- window maps -- 
+-- Create a Split windows
 keymap("n", "<leader>sv", "<C-w>v")
 keymap("n", "<leader>ss", "<C-w><C-s>")
 keymap("n", "<leader>n", "<C-w>v <C-w>w :Telescope find_files<CR>", opts)
 keymap("n", "<leader>ts", ":TSHighlightCapturesUnderCursor<CR>", opts)
 -- keymap("n", "<leader>qq", ":q<CR>")
+-- Navigate windows
 keymap("n", "<leader>j", "<C-w>j")
 keymap("n", "<leader>k", "<C-w>k")
 keymap("n", "<leader>h", "<C-w>h")
 keymap("n", "<leader>l", "<C-w>l")
+-- Move windows around
 keymap("n", "<leader>sj", "<C-w>J")
 keymap("n", "<leader>sk", "<C-w>K")
 keymap("n", "<leader>sh", "<C-w>H")
 keymap("n", "<leader>sl", "<C-w>L")
+-- Resize windows
 keymap("n", "<C-left>", "<C-w><")
 keymap("n", "<C-right>", "<C-w>>")
 keymap("n", "<C-up>", "<C-w>+")
