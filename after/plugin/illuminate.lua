@@ -34,7 +34,7 @@ require('illuminate').configure({
     -- Use :echom synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
     providers_regex_syntax_allowlist = {},
     -- under_cursor: whether or not to illuminate under the cursor
-    under_cursor = false, -- underlines it basicallhy
+    under_cursor = true, -- underlines it basicallhy
     -- large_file_cutoff: number of lines at which to use large_file_config
     -- The `under_cursor` option is disabled when this cutoff is hit
     large_file_cutoff = nil,
@@ -44,4 +44,19 @@ require('illuminate').configure({
     large_file_overrides = nil,
     -- min_count_to_highlight: minimum number of matches required to perform highlighting
     min_count_to_highlight = 1,
+})
+
+-- change the highlight style
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+
+--- auto update the highlight style on colorscheme change (highlight instead of underline)
+vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+  pattern = { "*" },
+  callback = function(ev)
+    vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+  end
 })
