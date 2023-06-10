@@ -11,6 +11,7 @@ tree.setup({
     sort_by = "case_sensitive",
     view = {
         width = 30,
+		hide_root_foler = true,
     },
     renderer = {
         group_empty = true,
@@ -22,6 +23,11 @@ tree.setup({
         custom = {".git/*"}, -- Ignore . git directory
         exclude = {".gitignore"}
     },
+	actions = {
+		change_dir = {
+			restrict_above_cwd = true,
+		}
+	}
 })
 
 
