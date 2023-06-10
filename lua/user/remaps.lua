@@ -10,6 +10,8 @@ vim.g.mapleader = " "
 --------------------
 ------ Normal ------
 --------------------
+-- Close the buffer 
+keymap("n", "<C-q>", ":Bdelete<CR>", opts)
 -- recenter move down
 keymap("n", "<C-d>", "<C-d>zz")
 -- recenter move up

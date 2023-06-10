@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
 
+	-- Manage closing buffers 
+	use 'moll/vim-bbye'
+
     -- Buffer, tabs, windows
     use {
         'akinsho/bufferline.nvim',
