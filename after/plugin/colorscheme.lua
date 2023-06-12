@@ -26,7 +26,7 @@ local function setColor(color)
 end
 
 function ColorMyPencils(color)
-	color = color or "codedark"
+	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -36,22 +36,24 @@ end
 
 local color_idx = 1
 
+ColorMyPencils()
+
 --let g:gruvbox_italic=1
 vim.g.gruvbox_italic=1
 
--- ADD THEMES HERE --- 
-local default_color = "onedark"
-local colors = {
-    "gruvbox",
-    "codedark",
-    "rose-pine",
-    "nightfox",
-    "nordfox",
-    "material",
-    "onedark",
-}
+--[[ -- ADD THEMES HERE ---  ]]
+--[[ local default_color = "onedark" ]]
+--[[ local colors = { ]]
+--[[     "gruvbox", ]]
+--[[     "codedark", ]]
+--[[     "rose-pine", ]]
+--[[     "nightfox", ]]
+--[[     "nordfox", ]]
+--[[     "material", ]]
+--[[     "onedark", ]]
+--[[ } ]]
 
-local num_colors = #(colors)
+--[[ local num_colors = #(colors) ]]
 
 --[[ -- toggle thru install color schemes
 vim.keymap.set("n", "<C-q>", function()

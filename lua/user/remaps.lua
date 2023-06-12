@@ -68,6 +68,9 @@ keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
 keymap("n", "<leader>mc", ":MarkdownPreviewStop<CR>", opts)
 
+-- Find Todo's
+keymap("n", "<leader>td", ":TodoTrouble<CR>", opts)
+
 --------------------
 ------ Insert ------
 --------------------
