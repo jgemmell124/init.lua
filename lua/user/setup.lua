@@ -18,7 +18,7 @@ opt.wrap=false
 opt.showcmd=true
 
 -- Show matching brackets
-opt.showmatch=false -- true
+opt.showmatch=true -- true
 
 opt.scrolloff=8
 
