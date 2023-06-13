@@ -36,7 +36,7 @@ end
 
 local color_idx = 1
 
-ColorMyPencils()
+--[[ ColorMyPencils() ]]
 
 --let g:gruvbox_italic=1
 vim.g.gruvbox_italic=1
