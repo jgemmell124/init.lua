@@ -100,6 +100,8 @@ return require('packer').startup(function(use)
         }
     }
 
+	use 'folke/trouble.nvim'
+
     -- COLOR THEMES --
     -- Color theme (Gruv box)
     use "ellisonleao/gruvbox.nvim"
