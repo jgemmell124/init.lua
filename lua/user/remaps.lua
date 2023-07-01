@@ -38,10 +38,11 @@ keymap("n", "<leader>k", "<C-w>k")
 keymap("n", "<leader>h", "<C-w>h")
 keymap("n", "<leader>l", "<C-w>l")
 -- Move windows around
-keymap("n", "<leader>sj", "<C-w>J")
-keymap("n", "<leader>sk", "<C-w>K")
-keymap("n", "<leader>sh", "<C-w>H")
-keymap("n", "<leader>sl", "<C-w>L")
+-- TODO: leave to the normal bindings?
+keymap("n", "<leader>sj", "<C-w>J") -- Send to very bottom
+keymap("n", "<leader>sk", "<C-w>K") -- Send to very top 
+keymap("n", "<leader>sh", "<C-w>H") -- Send all the way Left
+keymap("n", "<leader>sl", "<C-w>L") -- Send all the way right 
 -- Resize windows
 keymap("n", "<C-left>", "<C-w><")
 keymap("n", "<C-right>", "<C-w>>")

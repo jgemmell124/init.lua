@@ -21,10 +21,10 @@ require('illuminate').configure({
     filetypes_allowlist = {},
     -- modes_denylist: modes to not illuminate, this overrides modes_allowlist
     -- See `:help mode()` for possible values
-    modes_denylist = {},
+    modes_denylist = {'v', 'i'},
     -- modes_allowlist: modes to illuminate, this is overriden by modes_denylist
     -- See `:help mode()` for possible values
-    modes_allowlist = {},
+    modes_allowlist = {'n'},
     -- providers_regex_syntax_denylist: syntax to not illuminate, this overrides providers_regex_syntax_allowlist
     -- Only applies to the 'regex' provider
     -- Use :echom synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
