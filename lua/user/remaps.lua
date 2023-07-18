@@ -10,6 +10,8 @@ vim.g.mapleader = " "
 --------------------
 ------ Normal ------
 --------------------
+-- Open Netrw
+keymap("n", "<leader>f", ":Ex<CR>")
 -- Close the buffer 
 keymap("n", "<C-q>", ":Bdelete<CR>", opts)
 -- recenter move down
