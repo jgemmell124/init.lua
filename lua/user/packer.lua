@@ -65,15 +65,15 @@ return require('packer').startup(function(use)
 	use("nvim-treesitter/playground")
 
     -- Nvim Tree
-    use { "nvim-tree/nvim-tree.lua",
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-            'kyazdani42/nvim-web-devicons'
-        },
-        config = function()
-            require("nvim-tree").setup {}
-        end
-    }
+    --[[ use { "nvim-tree/nvim-tree.lua", ]]
+    --[[     requires = { ]]
+    --[[         'nvim-tree/nvim-web-devicons', -- optional ]]
+    --[[         'kyazdani42/nvim-web-devicons' ]]
+    --[[     }, ]]
+    --[[     config = function() ]]
+    --[[         require("nvim-tree").setup {} ]]
+    --[[     end ]]
+    --[[ } ]]
 
     -- Harpoon
     use 'ThePrimeagen/harpoon'
