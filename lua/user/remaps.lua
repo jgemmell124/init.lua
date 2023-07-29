@@ -22,11 +22,11 @@ keymap("n", "<C-u>", "<C-u>zz")
 -- switch between most recent buffers
 keymap("n", "<leader><Tab>", "<C-^>", opts)
 -- Swtich to buffer on right
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+--[[ keymap("n", "<S-l>", ":bnext<CR>", opts) ]]
+--[[ keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts) ]]
 -- Swtich to buffer on left
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
+--[[ keymap("n", "<S-h>", ":bprevious<CR>", opts) ]]
+--[[ keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts) ]]
 -- window maps -- 
 -- Create a Split windows
 keymap("n", "<leader>sv", "<C-w>v")
