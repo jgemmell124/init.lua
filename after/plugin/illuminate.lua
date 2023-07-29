@@ -48,16 +48,16 @@ require('illuminate').configure({
 })
 
 -- change the highlight style
-vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
-vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
-vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = '#444444' })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = '#444444' })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = '#444444' })
 
 --- auto update the highlight style on colorscheme change (highlight instead of underline)
-vim.api.nvim_create_autocmd({ "ColorScheme" }, {
-  pattern = { "*" },
-  callback = function(ev)
-    vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
-    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
-    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
-  end
-})
+--[[ vim.api.nvim_create_autocmd({ "ColorScheme" }, { ]]
+--[[   pattern = { "*" }, ]]
+--[[   callback = function(ev) ]]
+--[[     vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" }) ]]
+--[[     vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" }) ]]
+--[[     vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" }) ]]
+--[[   end ]]
+--[[ }) ]]
