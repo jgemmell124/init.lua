@@ -1,5 +1,14 @@
 local builtin = require('telescope.builtin')
 
+-- ignore netrw
+vim.g.loaded_netrwPlugin = 1
+
+builtin.buffers({
+	sort_lastused=true,
+	ignore_current_buffer=true,
+	path_display = { 'short' },
+})
+
 -- find in files
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})

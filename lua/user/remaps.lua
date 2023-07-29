@@ -18,6 +18,9 @@ keymap("n", "<C-q>", ":Bdelete<CR>", opts)
 keymap("n", "<C-d>", "<C-d>zz")
 -- recenter move up
 keymap("n", "<C-u>", "<C-u>zz")
+-- recenter last cursor location
+keymap("n", "<C-o>", "<C-o>zz")
+
 -- Navigate buffers --
 -- switch between most recent buffers
 keymap("n", "<leader><Tab>", "<C-^>", opts)
