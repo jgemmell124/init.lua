@@ -125,4 +125,5 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- Only Load one theme 
 --[[ require('onedark').load() ]]
-require('vscode').load()
+--[[ require('vscode').load() ]]
+vim.cmd("colorscheme darkplus")

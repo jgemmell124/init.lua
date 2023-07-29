@@ -108,12 +108,16 @@ return require('packer').startup(function(use)
     -- Using Packer
     use 'navarasu/onedark.nvim'
     -- Nightfox
-    use "EdenEast/nightfox.nvim" -- Packer
+    use "EdenEast/nightfox.nvim"
+	-- Packer
     use 'marko-cerovac/material.nvim'
     -- vscode theme
     use "tomasiser/vim-code-dark"
 	-- another vscode theme
 	use 'Mofiqul/vscode.nvim'
+	-- one more vscode theme
+	use 'lunarvim/darkplus.nvim'
+
     use({
 	  'rose-pine/neovim',
 	  as = 'rose-pine',

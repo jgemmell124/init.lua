@@ -9,6 +9,8 @@ opt.shiftwidth=4
 opt.expandtab=false
 opt.smartindent=true
 
+opt.cursorline=true
+
 opt.termguicolors=true
 
 --opt.colorcolumn='80'
