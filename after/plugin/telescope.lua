@@ -7,7 +7,6 @@ local function bsearch()
 		sort_lastused=true,
 		ignore_current_buffer=true,
 		path_display = { 'short' },
-		file_ignore_patterns = { '' }
 	})
 end
 
