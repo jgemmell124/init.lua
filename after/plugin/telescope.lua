@@ -1,7 +1,5 @@
 local builtin = require('telescope.builtin')
 
--- ignore netrw
-vim.g.loaded_netrwPlugin = 1
 
 builtin.buffers({
 	sort_lastused=true,
