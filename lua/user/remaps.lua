@@ -8,6 +8,12 @@ local keymap = vim.keymap.set
 vim.g.mapleader = " "
 
 --------------------
+------ Insert ------
+--------------------
+-- Press jk for faster escape  
+keymap("i", "jk", "<ESC>")
+
+--------------------
 ------ Normal ------
 --------------------
 -- Open Netrw
@@ -24,12 +30,6 @@ keymap("n", "<C-o>", "<C-o>zz")
 -- Navigate buffers --
 -- switch between most recent buffers
 keymap("n", "<leader><Tab>", "<C-^>", opts)
--- Swtich to buffer on right
---[[ keymap("n", "<S-l>", ":bnext<CR>", opts) ]]
---[[ keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts) ]]
--- Swtich to buffer on left
---[[ keymap("n", "<S-h>", ":bprevious<CR>", opts) ]]
---[[ keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts) ]]
 -- window maps -- 
 -- Create a Split windows
 keymap("n", "<leader>sv", "<C-w>v")
@@ -67,24 +67,14 @@ keymap("n", "<C-k>", "<cmd>cnext<CR>zz")
 keymap("n", "<C-j>", "<cmd>cprev<CR>zz")
 keymap("n", "<leader>k", "<cmd>lnext<CR>zz")
 keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
-
+-- Find and replace
 keymap("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
--- Open Mardown
-keymap("n", "<leader>md", ":MarkdownPreview<CR>", opts)
-keymap("n", "<leader>mc", ":MarkdownPreviewStop<CR>", opts)
-
--- Find Todo's
 keymap("n", "<leader>td", ":TodoTrouble<CR>", opts)
 
 --------------------
------- Insert ------
+------ Visual ------
 --------------------
--- Press jk for faster escape  
-keymap("i", "jk", "<ESC>")
-
-
--- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
