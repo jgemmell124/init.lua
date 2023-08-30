@@ -84,15 +84,9 @@ return require('packer').startup(function(use)
     -- COLOR THEMES --
     -- Color theme (Gruv box)
     use "ellisonleao/gruvbox.nvim"
-    -- Using Packer
     use 'navarasu/onedark.nvim'
-	-- Packer
     use 'marko-cerovac/material.nvim'
-    -- vscode theme
-    use "tomasiser/vim-code-dark"
-	-- another vscode theme
-	use 'Mofiqul/vscode.nvim'
-	-- one more vscode theme
+	-- the best vscode theme 
 	use 'lunarvim/darkplus.nvim'
 
 end)
