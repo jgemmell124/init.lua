@@ -12,7 +12,7 @@ opt.relativenumber=true
 
 opt.tabstop=4
 opt.shiftwidth=4
-opt.expandtab=false
+opt.expandtab=true -- spaces instead of tab
 opt.smartindent=true
 
 opt.cursorline=true
