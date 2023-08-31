@@ -135,7 +135,7 @@ cmp.setup({
             border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
         },
     },
-     
+
     experimental = {
         ghost_text = { hl_group = "GhostAUTOCMP" },
     },
