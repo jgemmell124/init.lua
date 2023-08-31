@@ -83,6 +83,8 @@ return require('packer').startup(function(use)
     -- Harpoon
     use 'ThePrimeagen/harpoon'
 
+    use 'folke/zen-mode.nvim'
+
     -- COLOR THEMES --
     -- Color theme (Gruv box)
     use 'ellisonleao/gruvbox.nvim'
