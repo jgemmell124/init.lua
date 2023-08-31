@@ -19,7 +19,7 @@ keymap("i", "jk", "<ESC>")
 -- Open Netrw
 keymap("n", "<leader>f", ":Ex<CR>")
 -- Close the buffer 
-keymap("n", "<C-q>", ":Bdelete<CR>", opts)
+keymap("n", "<C-q>", ":bdelete<CR>", opts)
 -- recenter move down
 keymap("n", "<C-d>", "<C-d>zz")
 -- recenter move up
@@ -65,8 +65,8 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 -- Quick Fix
 keymap("n", "<C-k>", "<cmd>cnext<CR>zz")
 keymap("n", "<C-j>", "<cmd>cprev<CR>zz")
-keymap("n", "<leader>k", "<cmd>lnext<CR>zz")
-keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
+keymap("n", "<leader>ck", "<cmd>lnext<CR>zz")
+keymap("n", "<leader>cj", "<cmd>lprev<CR>zz")
 -- Find and replace
 keymap("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
