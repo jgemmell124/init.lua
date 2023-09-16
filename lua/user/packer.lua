@@ -6,8 +6,6 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-	use 'stevearc/dressing.nvim'
-
     -- Telescope for file searching 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
