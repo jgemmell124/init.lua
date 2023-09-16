@@ -1,11 +1,14 @@
 require('telescope').setup({
 	pickers = {
-		--[[ lsp_references = { ]]
-		--[[ 	theme = 'dropdown' ]]
-		--[[ }, ]]
-		find_files = {
+		lsp_references = {
 			theme = 'dropdown'
-		}
+		},
+		live_grep = {
+			theme = 'dropdown'
+		},
+		lsp_docuemnt_symbols = {
+			theme = 'dropdown'
+		},
 	}
 })
 
