@@ -84,10 +84,6 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     })
 
-    -- Harpoon
-    use 'ThePrimeagen/harpoon'
-
-    use 'folke/zen-mode.nvim'
 
     -- COLOR THEMES --
     -- Color theme (Gruv box)
