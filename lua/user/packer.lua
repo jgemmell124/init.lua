@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
     -- Tree Sitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use 'nvim-treesitter/playground'
+	use 'nvim-treesitter/nvim-treesitter-context'
 
     -- autopair brackets, quotes, etc
     use 'windwp/nvim-autopairs'
@@ -61,7 +62,6 @@ return require('packer').startup(function(use)
 
     -- Line Indents
     use 'lukas-reineke/indent-blankline.nvim'
-
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
 
