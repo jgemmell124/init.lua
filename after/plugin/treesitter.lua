@@ -1,3 +1,5 @@
+vim.g.skip_ts_context_commmentstring_module = true;
+
 require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
     ensure_installed = { "python", "javascript", "c", "lua", "vim", "vimdoc", "query" },
@@ -31,8 +33,6 @@ require'nvim-treesitter.configs'.setup {
 
     -- comment strings
     context_commentstring = {
-        enable = true,
-        enable_autocmd = true,
     },
 
 	autotag = {
@@ -59,7 +59,12 @@ require'nvim-treesitter.configs'.setup {
 	}
 }
 
+require('ts_context_commentstring').setup({
+	enable = true,
+	enable_autocmd = true,
+});
+
+
 vim.keymap.set("n", "[c", function()
   require("treesitter-context").go_to_context()
 end, { silent = true })
-
