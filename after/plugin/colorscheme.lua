@@ -26,7 +26,7 @@ require("gruvbox").setup({
   dim_inactive = false,
   transparent_mode = false,
 })
---[[ vim.cmd("colorscheme gruvbox") ]]
+vim.cmd("colorscheme gruvbox")
 
 -- Lua:
 -- For dark theme (neovim's default)
