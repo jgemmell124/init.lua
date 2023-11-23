@@ -36,17 +36,28 @@ require("gruvbox").setup({
 -- grubox material 
 vim.g.gruvbox_material_foreground = 'original'
 vim.g.gruvbox_material_background = 'soft'
-vim.cmd("colorscheme gruvbox-material")
+--[[ vim.cmd("colorscheme gruvbox-material") ]]
+--------------------------------------------
+
+-- gruvbox baby
+vim.g.gruvbox_baby_transparent_mode = 1
+--[[ vim.g.gruvbox_baby_function_style = "bold" ]]
+--[[ vim.g.gruvbox_baby_keyword_style = "italic" ]]
+--[[ vim.g.gruvbox_baby_highlights = {Normal = {fg = "#123123", bg = "NONE", style="underline"}} ]]
+--[[ vim.g.gruvbox_baby_telescope_theme = 1 ]]
+vim.g.gruvbox_baby_use_original_palette = 1
+-- Load the colorscheme
+vim.cmd('colorscheme gruvbox-baby')
 --------------------------------------------
 
 -- Lua:
 -- For dark theme (neovim's default)
-vim.o.background = 'dark'
+--[[ vim.o.background = 'dark' ]]
 -- For light theme
 --[[ vim.o.background = 'light' ]]
 --
 --Lua:
-vim.g.material_style = "darker"
+--[[ vim.g.material_style = "darker" ]]
 
 
 require('onedark').setup  {
