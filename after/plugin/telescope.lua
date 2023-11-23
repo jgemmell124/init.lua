@@ -1,4 +1,11 @@
 require('telescope').setup({
+	defaults = {
+		--[[ borderchars = { ]]
+		--[[ 	prompt = { "─", " ", " ", " ", "─", "─", " ", " " }, ]]
+		--[[ 	results = { " " }, ]]
+		--[[ 	preview = { " " }, ]]
+		--[[ }, ]]
+	},
 	pickers = {
 		lsp_references = {
 			theme = 'dropdown'

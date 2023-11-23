@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
             'williamboman/mason.nvim',
             run = function()
                 pcall(vim.cmd, 'MasonUpdate')
-				
             end,
             },
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
@@ -90,9 +89,11 @@ return require('packer').startup(function(use)
 	use 'chriskempson/base16-vim'
 
     -- Color theme (Gruv box)
-    use 'ellisonleao/gruvbox.nvim'
-	use 'sainnhe/gruvbox-material'
-	use 'luisiacc/gruvbox-baby'
+    use 'ellisonleao/gruvbox.nvim' -- 1
+	use 'sainnhe/gruvbox-material' -- 2
+	use 'luisiacc/gruvbox-baby' -- 3
+
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     use 'navarasu/onedark.nvim'
     use 'marko-cerovac/material.nvim'
