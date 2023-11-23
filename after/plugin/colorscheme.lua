@@ -1,6 +1,9 @@
 --let g:gruvbox_italic=1
 vim.g.gruvbox_italic=1
 
+
+--------------------------------------------
+-- gruvbox
 -- Default options:
 require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
@@ -26,7 +29,15 @@ require("gruvbox").setup({
   dim_inactive = false,
   transparent_mode = false,
 })
-vim.cmd("colorscheme gruvbox")
+--[[ vim.cmd("colorscheme gruvbox") ]]
+
+
+--------------------------------------------
+-- grubox material 
+vim.g.gruvbox_material_foreground = 'original'
+vim.g.gruvbox_material_background = 'soft'
+vim.cmd("colorscheme gruvbox-material")
+--------------------------------------------
 
 -- Lua:
 -- For dark theme (neovim's default)
