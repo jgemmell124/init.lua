@@ -16,7 +16,8 @@ require('telescope').setup({
 		lsp_docuemnt_symbols = {
 			theme = 'dropdown'
 		},
-	}
+	},
+
 })
 
 local builtin = require('telescope.builtin')
@@ -43,5 +44,8 @@ vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({ search = vim.fn.input("Grep String > ") });
 end)
 
--- open in split view: <C-v>
--- scroll buffer preview: <C-u> <C-D>
+if vim.g.colors_name == 'gruvbox' then
+	-- there is none for gruvbox so add our own
+	vim.api.nvim_set_hl(0, 'TelescopeSelection', { link = 'IlluminatedWordText' })
+	vim.api.nvim_set_hl(0, 'TelescopeMatching', { link = 'GruvboxAqua' })
+end

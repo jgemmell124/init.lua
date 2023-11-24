@@ -23,11 +23,3 @@ require("ibl").setup {
 	};
 	whitespace = { highlight = { "Whitespace", "NonText" } },
 }
-
-
-local function one ()
-	local me = 1;
-	while true do
-		print('hello');
-	end
-end

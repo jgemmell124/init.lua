@@ -1,8 +1,7 @@
 require('lualine').setup {
 	options = {
 		icons_enabled = true,
-		-- this looks better imo
-		theme = 'onedark',
+		theme = 'gruvbox',
 		--[[ component_separators = { left = '', right = ''}, ]]
 		--[[ section_separators = { left = '', right = ''}, ]]
 		component_separators = {right = '|'},
@@ -23,7 +22,7 @@ require('lualine').setup {
 	sections = {
 		lualine_a = {'mode'},
 		lualine_b = {'branch', 'diff', 'diagnostics'},
-		lualine_c = {{'filename', path=1}},
+		--[[ lualine_c = {{'filename', path=1}}, ]]
 		lualine_x = {'encoding', 'fileformat', 'filetype'},
 		lualine_y = {'progress'},
 		lualine_z = {'location', 'searchcount'}
@@ -31,16 +30,18 @@ require('lualine').setup {
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = {{'filename', path=1}},
+		lualine_c = {{'filename', path=1}}, -- full relative path
 		lualine_x = {'location'},
 		lualine_y = {},
 		lualine_z = {}
 	},
 	tabline = {},
 	winbar = {
+		-- show name at top of file
 		lualine_b = {'filename'},
 	},
 	inactive_winbar = {
+		-- show name at top of file
 		lualine_b = {'filename'},
 	},
 	extensions = {}

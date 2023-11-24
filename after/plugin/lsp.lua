@@ -153,3 +153,28 @@ cmp.setup({
         ghost_text = { hl_group = "GhostAUTOCMP" },
     },
 })
+
+if vim.g.colors_name == 'gruvbox' then
+	-- change kinds TODO: these are wrong, don't match up with the actual color
+	vim.cmd [[highlight! link CmpItemAbbrMatchFuzzy GruvboxAquaAqua]]
+	vim.cmd [[highlight! link CmpItemKindText GruxboxFg]]
+	vim.cmd [[highlight! link CmpItemKindMethod GruvboxPurple]]
+	vim.cmd [[highlight! link CmpItemKindFunction GruvboxPurple]]
+	vim.cmd [[highlight! link CmpItemKindConstructor GruvboxGreen]]
+	vim.cmd [[highlight! link CmpItemKindField GruvboxAqua]]
+	vim.cmd [[highlight! link CmpItemKindVariable GruvboxBlue]]
+	vim.cmd [[highlight! link CmpItemKindClass GruvboxGreen]]
+	vim.cmd [[highlight! link CmpItemKindInterface GruvboxGreen]]
+	vim.cmd [[highlight! link CmpItemKindValue GruvboxOrange]]
+	vim.cmd [[highlight! link CmpItemKindKeyword GruvboxKeyword]]
+	vim.cmd [[highlight! link CmpItemKindSnippet GruvboxRed]]
+	vim.cmd [[highlight! link CmpItemKindFile GruvboxOrange]]
+	vim.cmd [[highlight! link CmpItemKindFolder GruvboxOrange]]
+	local hl = vim.api.nvim_set_hl
+	-- change text to green
+	hl(0, 'CmpItemAbbrMatchFuzzy', { link = 'GruvboxAqua' })
+	hl(0, 'CmpItemAbbrMatchFuzzyDefault', { link = 'GruvboxAqua' })
+	hl(0, 'CmpItemAbbrMatch', { link = 'GruvboxAqua' })
+	hl(0, 'CmpItemAbbrMatchDefault', { link = 'GruvboxAqua' })
+	hl(0, 'CmpItemAbbrMatch', { link = 'GruvboxAqua' })
+end

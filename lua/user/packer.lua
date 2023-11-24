@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
     -- Tree Sitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use 'nvim-treesitter/playground'
-	use 'nvim-treesitter/nvim-treesitter-context'
+	--[[ use 'nvim-treesitter/nvim-treesitter-context' ]]
 
     -- autopair brackets, quotes, etc
     use 'windwp/nvim-autopairs'
@@ -65,9 +65,6 @@ return require('packer').startup(function(use)
     -- Git signs
     use 'lewis6991/gitsigns.nvim'
 
-	-- Manage closing buffers 
-	use 'moll/vim-bbye'
-
     -- Buffer, tabs, windows
     use {
         'akinsho/bufferline.nvim',
@@ -84,14 +81,11 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     })
 
-
-    -- COLOR THEMES --
-	use 'chriskempson/base16-vim'
-
     -- Color theme (Gruv box)
+	--[[ use 'morhetz/gruvbox' ]]
     use 'ellisonleao/gruvbox.nvim' -- 1
-	use 'sainnhe/gruvbox-material' -- 2
-	use 'luisiacc/gruvbox-baby' -- 3
+	--[[ use 'sainnhe/gruvbox-material' -- 2 -- todo kinda gross, tags don't work ]]
+	--[[ use 'luisiacc/gruvbox-baby' -- 3 == no the fuzzy find is gross ]]
 
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 

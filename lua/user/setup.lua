@@ -7,6 +7,8 @@ vim.g.mapleader=" "
 --[[ vim.g.loaded_netrwPlugin = 1 ]]
 vim.g.netrw_fastbrowse = 0
 
+opt.fillchars = {eob = " "} -- remove the '~' at the end of the file
+
 opt.number=true
 opt.relativenumber=true
 
@@ -15,7 +17,7 @@ opt.shiftwidth=4
 opt.expandtab=true -- spaces instead of tab
 opt.smartindent=true
 
-opt.cursorline=true
+opt.cursorline=false -- highlight the current line
 
 opt.termguicolors=true
 

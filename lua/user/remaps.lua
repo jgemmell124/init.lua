@@ -36,6 +36,7 @@ keymap("n", "<leader>sv", "<C-w>v")
 keymap("n", "<leader>ss", "<C-w><C-s>")
 keymap("n", "<leader>n", "<C-w>v <C-w>w :Telescope find_files<CR>", opts)
 keymap("n", "<leader>ts", ":TSHighlightCapturesUnderCursor<CR>", opts)
+keymap("n", "<leader>ti", ":Inspect<CR>", opts)
 -- keymap("n", "<leader>qq", ":q<CR>")
 -- Navigate windows
 keymap("n", "<leader>j", "<C-w>j")
