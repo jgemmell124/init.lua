@@ -84,7 +84,7 @@ local function enableGruvboxBaby()
 	-- gruvbox baby
 	vim.g.gruvbox_baby_transparent_mode = 0
 	vim.g.gruvbox_baby_function_style = "NONE"
-	--[[ vim.g.gruvbox_baby_keyword_style = "italic" ]]
+	vim.g.gruvbox_baby_keyword_style = "italic"
 	--[[ vim.g.gruvbox_baby_highlights = {Normal = {fg = "#123123", bg = "NONE", style="underline"}} ]]
 	--[[ vim.g.gruvbox_baby_telescope_theme = 1 ]]
 	--[[ vim.g.gruvbox_baby_use_original_palette = 1 ]]
@@ -213,10 +213,10 @@ end
 --[[ enableDarkPlus(); ]]
 --[[ enableRosePine(); ]]
 
-enableGruvbox();
+--[[ enableGruvbox(); ]]
 
 --[[ enableGruvboxMaterial(); ]]
---[[ enableGruvboxBaby(); ]]
+enableGruvboxBaby();
 --[[ vim.o.background = 'dark' ]]
 --[[ vim.cmd('colorscheme gruvbox') ]]
 
