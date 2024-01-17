@@ -17,7 +17,6 @@ if vim.g.colors_name == 'gruvbox' then
 		blue = colors.neutral_blue,
 	}
 else
-	print('no color')
 	palette = {
 		text = '#ffffff',
 		dim = '#4a4a4a',

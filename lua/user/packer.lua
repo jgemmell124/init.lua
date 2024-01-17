@@ -42,6 +42,10 @@ return require('packer').startup(function(use)
 	use 'nvim-treesitter/playground'
 	--[[ use 'nvim-treesitter/nvim-treesitter-context' ]]
 
+	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+		require("toggleterm").setup()
+	end}
+
     -- autopair brackets, quotes, etc
     use 'windwp/nvim-autopairs'
 	-- TODO check if autopairs can do this
@@ -85,7 +89,7 @@ return require('packer').startup(function(use)
 	--[[ use 'morhetz/gruvbox' ]]
     use 'ellisonleao/gruvbox.nvim' -- 1
 	--[[ use 'sainnhe/gruvbox-material' -- 2 -- todo kinda gross, tags don't work ]]
-	--[[ use 'luisiacc/gruvbox-baby' -- 3 == no the fuzzy find is gross ]]
+	use 'luisiacc/gruvbox-baby' -- 3 == no the fuzzy find is gross
 
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 
