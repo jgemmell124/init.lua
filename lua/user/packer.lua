@@ -98,4 +98,7 @@ return require('packer').startup(function(use)
 	-- the best vscode theme 
 	use 'lunarvim/darkplus.nvim'
 
+	use 'github/copilot.vim'
+
+
 end)
