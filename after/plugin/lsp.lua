@@ -13,6 +13,12 @@ lsp.preset({
 })
 
 
+local function fdsf(type)
+	print(type)
+end
+
+fdsf('hello');
+	
 local servers = {
     'tsserver',
     'rust_analyzer',
@@ -30,7 +36,10 @@ require'lspconfig'.lua_ls.setup {
             diagnostics = {
                 globals = { 'vim' }
             }
-        }
+        },
+		inlay_hints = {
+			enable = true,
+		}
     }
 }
 

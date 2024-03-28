@@ -71,8 +71,8 @@ keymap("n", "<leader>cj", "<cmd>lprev<CR>zz")
 -- Find and replace
 keymap("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-keymap("n", "<leader>td", ":TodoTrouble<CR>", opts)
-
+keymap("n", "<leader>td", ":TodoQuickFix<CR>", opts)
+keymap("n", "<leader>ptd", ":TodoTelescope<CR>", opts)
 --------------------
 ------ Visual ------
 --------------------

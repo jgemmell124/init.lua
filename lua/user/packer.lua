@@ -8,10 +8,11 @@ return require('packer').startup(function(use)
 
     -- Telescope for file searching 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '1.1.x',
+        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
+	use 'HiPhish/nvim-ts-rainbow2'
 
     -- LSP (Lsp Zero)
     use {
