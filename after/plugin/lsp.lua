@@ -12,13 +12,6 @@ lsp.preset({
     },
 })
 
-
-local function fdsf(type)
-	print(type)
-end
-
-fdsf('hello');
-	
 local servers = {
     'tsserver',
     'rust_analyzer',
@@ -41,6 +34,14 @@ require'lspconfig'.lua_ls.setup {
 			enable = true,
 		}
     }
+}
+
+
+require'lspconfig'.clangd.setup {
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
 }
 
 lsp.set_preferences({
