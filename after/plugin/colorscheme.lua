@@ -67,15 +67,18 @@ end
 local function enableGruvboxMaterial()
 	vim.g.gruvbox_material_better_performance = 1
 	-- Fonts
-	vim.g.gruvbox_material_disable_italic_comment = 1
+	vim.g.gruvbox_material_disable_italic_comment = 0
 	vim.g.gruvbox_material_enable_italic = 0
 	vim.g.gruvbox_material_enable_bold = 0
-	vim.g.gruvbox_material_transparent_background = 1
+	vim.g.gruvbox_material_transparent_background = 0
 	-- Themes
 	vim.g.gruvbox_material_foreground = 'original' -- original, mix, material
-	vim.g.gruvbox_material_background = 'hard'
+	vim.g.gruvbox_material_background = 'medium' -- hard soft medium,
 	vim.g.gruvbox_material_ui_contrast = 'high' -- The contrast of line numbers, indent lines, etc.
-	vim.g.gruvbox_material_float_style = 'dim'  -- Background of floating windows
+	vim.g.gruvbox_material_float_style = 'bright'  -- Background of floating windows 'bright/dim'
+	-- others
+	vim.g.gruvbox_material_diagnostic_line_highlight = 1
+	vim.gruvbox_material_diagnostic_virtual_text = 'colored'
 	vim.cmd("colorscheme gruvbox-material")
 end
 --[[ enableGruvboxMaterial(); ]]
