@@ -89,7 +89,7 @@ return require('packer').startup(function(use)
     -- Color theme (Gruv box)
 	--[[ use 'morhetz/gruvbox' ]]
     use 'ellisonleao/gruvbox.nvim' -- 1
-	--[[ use 'sainnhe/gruvbox-material' -- 2 -- todo kinda gross, tags don't work ]]
+	use 'sainnhe/gruvbox-material' -- 2 -- todo kinda gross, tags don't work
 	use 'luisiacc/gruvbox-baby' -- 3 == no the fuzzy find is gross
 
 	use({ 'rose-pine/neovim', as = 'rose-pine' })

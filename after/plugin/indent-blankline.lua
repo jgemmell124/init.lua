@@ -22,5 +22,5 @@ require("ibl").setup {
         --[[ char = '│', -- center ]]
 		smart_indent_cap = false
 	};
-	--[[ whitespace = { highlight = { "Whitespace", "NonText" } }, ]]
+	whitespace = { highlight = { "Whitespace", "NonText" } },
 }

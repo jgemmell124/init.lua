@@ -33,8 +33,8 @@ local function enableGruvbox()
 			--[[ Type = {link="GruvboxYellow"}, ]]
 			--[[ Identifier = {link="GruvboxBlue"}, ]]
 			--[[ ["@parameter"] = {link = "GruvboxYellow"}, ]]
-			["@variable.builtin"] = { link="GruvboxYellowBold" },
-			["@constant.builtin"] = { link="GruvboxWhiteBold" },
+			--[[ ["@variable.builtin"] = { link="GruvboxYellowBold" }, ]]
+			--[[ ["@constant.builtin"] = { link="GruvboxWhiteBold" }, ]]
 			--[[ ["@text.uri"] = {}, ]]
 			-- JAVASCRIPT / REACT / javascript
 			['@tag.javascript'] = { link = 'GruvboxAqua' },
@@ -215,8 +215,8 @@ end
 
 --[[ enableGruvbox(); ]]
 
---[[ enableGruvboxMaterial(); ]]
-enableGruvboxBaby();
+enableGruvboxMaterial();
+--[[ enableGruvboxBaby(); ]]
 --[[ vim.o.background = 'dark' ]]
 --[[ vim.cmd('colorscheme gruvbox') ]]
 
