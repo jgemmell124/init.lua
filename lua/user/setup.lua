@@ -12,16 +12,19 @@ opt.fillchars = {eob = " "} -- remove the '~' at the end of the file
 opt.number=true
 opt.relativenumber=true
 
-opt.tabstop=4
-opt.shiftwidth=4
-vim.o.expandtab=true
+-- Indenting --
+opt.tabstop=4 -- show tabs as 4 spaces
+opt.shiftwidth=4 -- when you press tab, it inserts 4 spaces
+opt.softtabstop=4 -- backspace over 4 spaces
+opt.expandtab=true -- use spaces instead of tabs
+
 opt.smartindent=true
 
 opt.cursorline=false -- highlight the current line
 
 opt.termguicolors=true
 
---[[ opt.colorcolumn='80' ]]
+opt.colorcolumn='80'
 opt.wrap=false
 
 -- Show partial commands
@@ -30,6 +33,7 @@ opt.showcmd=true
 -- Show matching brackets
 opt.showmatch=true -- true
 
+-- Give 8 lines at bottom --
 opt.scrolloff=8
 
 opt.updatetime=50
@@ -40,6 +44,8 @@ opt.binary=true
 opt.eol=false
 opt.eof=false
 
+-- avoid showing message extra message when using completion
+opt.ffs='unix,dos,mac'
 
 vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
 	expr = true,

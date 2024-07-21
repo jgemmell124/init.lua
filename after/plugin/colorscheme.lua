@@ -78,7 +78,7 @@ local function enableGruvboxMaterial()
 	vim.g.gruvbox_material_float_style = 'bright'  -- Background of floating windows 'bright/dim'
 	-- others
 	vim.g.gruvbox_material_diagnostic_line_highlight = 1
-	vim.gruvbox_material_diagnostic_virtual_text = 'colored'
+	vim.gruvbox_material_diagnostic_virtual_text = 'grey'
 	vim.cmd("colorscheme gruvbox-material")
 end
 --[[ enableGruvboxMaterial(); ]]
