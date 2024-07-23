@@ -36,6 +36,9 @@ opt.showmatch=true -- true
 -- Give 8 lines at bottom --
 opt.scrolloff=8
 
+-- sign column (space between numbers and edge) --
+opt.signcolumn='yes'
+
 opt.updatetime=50
 
 opt.incsearch=true
