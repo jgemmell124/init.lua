@@ -60,7 +60,6 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"c",
 				"rust_analyzer",
 				"gopls",
 			},
