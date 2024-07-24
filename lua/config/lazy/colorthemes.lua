@@ -1,5 +1,5 @@
 function SetColorTheme(theme)
-	local curTheme = theme or "gruvbox-material"
+	local curTheme = theme or "gruvbox_material"
 	local themes = {
 		gruvbox = "gruvbox",
 		gruvbox_material = "gruvbox-material",
