@@ -1,5 +1,5 @@
 function SetColorTheme(theme)
-	local curTheme = theme or "gruvbox"
+	local curTheme = theme or "gruvbox-material"
 	local themes = {
 		gruvbox = "gruvbox",
 		gruvbox_material = "gruvbox-material",
@@ -17,8 +17,6 @@ end
 return {
 	{
 		"ellisonleao/gruvbox.nvim",
-
-		lazy = false,
 
 		config = function ()
 			require("gruvbox").setup({
@@ -39,7 +37,7 @@ return {
 				invert_tabline = false,
 				invert_intend_guides = false,
 				inverse = true, -- invert background for search, diffs, statuslines and errors
-				contrast = 'hard', -- can be "hard", "soft" or empty string
+				contrast = 'soft', -- can be "hard", "soft" or empty string
 				dim_inactive = false,
 				transparent_mode = true, -- transparent shows terminal back
 				palette_overrides = {
@@ -78,12 +76,13 @@ return {
 			})
 			vim.g.gruvbox_italic=1
 			vim.o.background = 'dark'
-			SetColorTheme("gruvbox")
 		end
 	},
 
 	{
 		"sainnhe/gruvbox-material",
+
+		lazy = false,
 
 		config = function ()
 
@@ -97,11 +96,11 @@ return {
 			vim.g.gruvbox_material_foreground = 'original' -- original, mix, material
 			vim.g.gruvbox_material_background = 'medium' -- hard soft medium,
 			vim.g.gruvbox_material_ui_contrast = 'high' -- The contrast of line numbers, indent lines, etc.
-			vim.g.gruvbox_material_float_style = 'bright'  -- Background of floating windows 'bright/dim'
+			vim.g.gruvbox_material_float_style = 'dim'  -- Background of floating windows 'bright/dim'
 			-- others
 			vim.g.gruvbox_material_diagnostic_line_highlight = 1
 			vim.gruvbox_material_diagnostic_virtual_text = 'grey'
-			vim.cmd("colorscheme gruvbox-material")
+			SetColorTheme()
 
 		end
 	},
