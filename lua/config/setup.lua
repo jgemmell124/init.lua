@@ -43,7 +43,6 @@ opt.updatetime=50
 
 opt.incsearch=true
 
-opt.binary=true
 opt.eol=false
 opt.eof=false
 
