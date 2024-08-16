@@ -1,7 +1,7 @@
--- VIM settings -- 
+-- VIM settings --
 local opt=vim.opt
 
--- Globals -- 
+-- Globals --
 vim.g.mapleader=" "
 -- ignore netrw?
 --[[ vim.g.loaded_netrwPlugin = 1 ]]
@@ -17,6 +17,10 @@ opt.tabstop=4 -- show tabs as 4 spaces
 opt.shiftwidth=4 -- when you press tab, it inserts 4 spaces
 opt.softtabstop=4 -- backspace over 4 spaces
 opt.expandtab=true -- use spaces instead of tabs
+
+-- white space set up
+opt.list=true
+opt.listchars='tab:»·,trail:·,extends:→,precedes:←,nbsp:␣'
 
 opt.smartindent=true
 
@@ -50,8 +54,8 @@ opt.eof=false
 opt.ffs='unix,dos,mac'
 
 vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
-	expr = true,
-	replace_keycodes = false
+    expr = true,
+    replace_keycodes = false
 })
 
 vim.g.copilot_no_tab_map = true

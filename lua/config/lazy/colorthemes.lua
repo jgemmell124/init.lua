@@ -84,14 +84,16 @@ return {
 
 		lazy = false,
 
+        priority = 999,
+
 		config = function ()
 
 			vim.g.gruvbox_material_better_performance = 1
 			-- Fonts
-			vim.g.gruvbox_material_disable_italic_comment = 0
-			vim.g.gruvbox_material_enable_italic = 0
-			vim.g.gruvbox_material_enable_bold = 0
-			vim.g.gruvbox_material_transparent_background = 0
+            vim.g.gruvbox_material_enable_italic = 1
+			--[[ vim.g.gruvbox_material_disable_italic_comment = 0 ]]
+            vim.g.gruvbox_material_enable_bold = 0
+            vim.g.gruvbox_material_transparent_background = 0
 			-- Themes
 			vim.g.gruvbox_material_foreground = 'original' -- original, mix, material
 			vim.g.gruvbox_material_background = 'medium' -- hard soft medium,
@@ -99,8 +101,10 @@ return {
 			vim.g.gruvbox_material_float_style = 'dim'  -- Background of floating windows 'bright/dim'
 			-- others
 			vim.g.gruvbox_material_diagnostic_line_highlight = 1
-			vim.gruvbox_material_diagnostic_virtual_text = 'grey'
-			SetColorTheme()
+			vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
+            vim.g.gruvbox_material_inlay_hints_background = 'dimmed'
+            vim.g.gruvbox_material_menu_selection_background = 'blue'
+            SetColorTheme()
 
 		end
 	},
@@ -153,7 +157,7 @@ return {
 					["@keyword."] = {fmt = 'italic'},
 					["@constant"] = {fmt = 'italic'},
 					["@type.builtin"] = {fg = '#98C1D9', fmt = 'italic'},
-				}, -- Override highlight groups   
+				}, -- Override highlight groups
 
 				-- Plugins Config --
 				diagnostics = {
@@ -178,12 +182,11 @@ return {
 		end
 
 	},
-
-	{
-		"lunarvim/darkplus.nvim",
-		config = function()
-			require("darkplus").setup()
-		end
-	}
+	--[[ { ]]
+	--[[ 	"lunarvim/darkplus.nvim", ]]
+	--[[ 	config = function() ]]
+	--[[ 		require("darkplus").setup() ]]
+	--[[ 	end ]]
+	--[[ } ]]
 
 }

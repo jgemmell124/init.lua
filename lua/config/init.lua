@@ -3,6 +3,15 @@ require('config.remaps')
 require('config.lazy_init')
 
 -- TODO add in some stuff here
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = {"*"},
+    callback = function ()
+        -- remove trailing spaces
+        local save_cursor = vim.fn.getpos(".")
+        vim.cmd("silent! keeppatterns %s/\\s\\+$//e")
+        vim.fn.setpos(".", save_cursor)
+    end
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
