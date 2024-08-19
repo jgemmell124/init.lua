@@ -45,7 +45,7 @@ return {
 
 	config = function()
 		-- custom ghost highlight group
-		vim.api.nvim_set_hl(0, 'GhostAUTOCMP', { italic=true, fg='#676767' }) --- cmp icon settings --- 
+		vim.api.nvim_set_hl(0, 'GhostAUTOCMP', { italic=true, fg='#676767' }) --- cmp icon settings ---
 
 		local cmp = require('cmp')
 		local cmp_lsp = require("cmp_nvim_lsp")
@@ -93,10 +93,6 @@ return {
 					require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
 				end,
 			},
-            window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
-            },
 			mapping = cmp.mapping.preset.insert({
 				["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<Tab>"] = cmp.mapping.select_next_item(cmp_select),

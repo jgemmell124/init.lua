@@ -20,7 +20,7 @@ opt.expandtab=true -- use spaces instead of tabs
 
 -- white space set up
 opt.list=true
-opt.listchars='tab:»·,trail:·,extends:→,precedes:←,nbsp:␣'
+opt.listchars='tab:» ,space:·,trail:·,extends:→,precedes:←,nbsp:␣'
 
 opt.smartindent=true
 
