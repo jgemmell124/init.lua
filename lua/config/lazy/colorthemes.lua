@@ -197,6 +197,13 @@ return {
                 flavour = "mocha",
             })
         end
+    },
+    {
+        "rebelot/kanagawa.nvim",
+        name = "kanagawa",
+        config = function()
+            require("kanagawa").load("dragon")
+        end
     }
 
 }
