@@ -9,7 +9,7 @@ return {
 		require('lualine').setup({
 			options = {
 				icons_enabled = true,
-				theme = 'gruvbox',
+				--[[ theme = 'gruvbox', ]]
 				--[[ component_separators = { left = '', right = ''}, ]]
 				--[[ section_separators = { left = '', right = ''}, ]]
 				component_separators = {right = '|'},
@@ -47,7 +47,6 @@ return {
 			winbar = {
 				-- show name at top of file
 				lualine_b = {'filename'},
-				lualine_c = {{'filename', path=1}}, -- full relative path
 			},
 			inactive_winbar = {
 				-- show name at top of file

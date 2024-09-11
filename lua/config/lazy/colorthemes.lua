@@ -91,8 +91,8 @@ return {
             vim.g.gruvbox_material_enable_bold = 0
             vim.g.gruvbox_material_transparent_background = 0
 			-- Themes
-			vim.g.gruvbox_material_foreground = 'original' -- original, mix, material
-			vim.g.gruvbox_material_background = 'medium' -- hard soft medium,
+			vim.g.gruvbox_material_foreground = 'mix' -- original, mix, material
+			vim.g.gruvbox_material_background = 'hard' -- hard soft medium,
 			vim.g.gruvbox_material_ui_contrast = 'high' -- The contrast of line numbers, indent lines, etc.
 			vim.g.gruvbox_material_float_style = 'dim'  -- Background of floating windows 'bright/dim'
 			-- others
@@ -100,7 +100,11 @@ return {
 			vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
             vim.g.gruvbox_material_inlay_hints_background = 'dimmed'
             vim.g.gruvbox_material_menu_selection_background = 'blue'
+            vim.g.gruvbox_material_visual = 'blue background'
+            vim.g.gruvbox_material_statusline = 'mix'
             SetColorTheme()
+            vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { link = "BlueBold" })
+            vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { link = "BlueBold" })
 
 		end
 	},
@@ -110,8 +114,12 @@ return {
 
 		config = function ()
 			vim.g.gruvbox_baby_transparent_mode = 0
-			vim.g.gruvbox_baby_function_style = "NONE"
+            vim.g.gruvbox_baby_background_color = "medium"
+            vim.g.gruvbox_baby_comment_style = "italic"
 			vim.g.gruvbox_baby_keyword_style = "italic"
+            vim.g.gruvbox_baby_function_style = "NONE"
+            vim.g.gruvbox_baby_variable_style = "NONE"
+            vim.g.gruvnox_baby_use_original_palette = 0
 		end
 	},
 
@@ -195,11 +203,6 @@ return {
         end
     },
     {
-        "rebelot/kanagawa.nvim",
-        name = "kanagawa",
-        config = function()
-            require("kanagawa").load("dragon")
-        end
+        "sainnhe/sonokai",
     }
-
 }
