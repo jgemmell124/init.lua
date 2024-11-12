@@ -10,7 +10,7 @@ vim.g.netrw_fastbrowse = 0
 opt.fillchars = {eob = " "} -- remove the '~' at the end of the file
 
 opt.number=true
-opt.relativenumber=true
+opt.relativenumber=false
 
 -- Indenting --
 opt.tabstop=4 -- show tabs as 4 spaces
@@ -24,7 +24,7 @@ opt.listchars='tab:» ,trail:·,extends:→,precedes:←,nbsp:␣'
 
 opt.smartindent=true
 
-opt.cursorline=false -- highlight the current line
+opt.cursorline=true -- highlight the current line
 
 opt.termguicolors=true
 

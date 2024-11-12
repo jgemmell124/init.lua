@@ -2,6 +2,7 @@ return {
 	"lewis6991/gitsigns.nvim",
 
 	config = function ()
+    vim.keymap.set("n", "<leader>b", ":Gitsigns blame<CR>")
 		require('gitsigns').setup {
 			signs = {
 				add          = { text = '│' },
