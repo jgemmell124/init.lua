@@ -1,11 +1,11 @@
 function SetColorTheme(theme)
-  local curTheme = theme or "gruvbox_material"
+  local curTheme = theme or "sonokai"
   local themes = {
     gruvbox = "gruvbox",
     gruvbox_material = "gruvbox-material",
     gruvbox_baby = "gruvbox-baby",
     onedark = "onedark",
-    rose_pine = "rose-pine",
+    rose_pine = "rose-pine-moon",
     sonokai = "sonokai",
   }
   if themes[curTheme] then
@@ -192,7 +192,7 @@ return {
   --[[ 	config = function() ]]
   --[[ 		require("darkplus").setup() ]]
   --[[ 	end ]]
-  --[[ } ]]
+  --[[ }, ]]
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -221,5 +221,8 @@ return {
   },
   {
     "Mofiqul/dracula.nvim"
+  },
+  {
+    "Mofiqul/vscode.nvim"
   }
 }

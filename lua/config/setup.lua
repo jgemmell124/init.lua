@@ -24,7 +24,7 @@ opt.listchars='tab:» ,trail:·,extends:→,precedes:←,nbsp:␣'
 
 opt.smartindent=true
 
-opt.cursorline=true -- highlight the current line
+opt.cursorline=false -- highlight the current line
 
 opt.termguicolors=true
 

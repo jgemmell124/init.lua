@@ -2,7 +2,7 @@
 -- REMAPS --
 
 local opts = {noremap = true, silent = true}
--- Shortened function name 
+-- Shortened function name
 local keymap = vim.keymap.set
 -- Change the leader to a space
 vim.g.mapleader = " "
@@ -10,15 +10,15 @@ vim.g.mapleader = " "
 --------------------
 ------ Insert ------
 --------------------
--- Press jk for faster escape  
+-- Press jk for faster escape
 keymap("i", "jk", "<ESC>")
 
 --------------------
 ------ Normal ------
 --------------------
 -- Open Netrw
-keymap("n", "<leader>f", ":Ex<CR>")
--- Close the buffer 
+--[[ keymap("n", "<leader>f", ":Ex<CR>") ]]
+-- Close the buffer
 keymap("n", "<C-q>", ":bdelete<CR>", opts)
 -- recenter move down
 keymap("n", "<C-d>", "<C-d>zz")
@@ -30,7 +30,7 @@ keymap("n", "<C-o>", "<C-o>zz")
 -- Navigate buffers --
 -- switch between most recent buffers
 keymap("n", "<leader><Tab>", "<C-^>", opts)
--- window maps -- 
+-- window maps --
 -- Create a Split windows
 keymap("n", "<leader>sv", "<C-w>v")
 keymap("n", "<leader>ss", "<C-w><C-s>")
@@ -38,17 +38,6 @@ keymap("n", "<leader>n", "<C-w>v <C-w>w :Telescope find_files<CR>", opts)
 keymap("n", "<leader>ts", ":TSHighlightCapturesUnderCursor<CR>", opts)
 keymap("n", "<leader>ti", ":Inspect<CR>", opts)
 -- keymap("n", "<leader>qq", ":q<CR>")
--- Navigate windows
-keymap("n", "<leader>j", "<C-w>j")
-keymap("n", "<leader>k", "<C-w>k")
-keymap("n", "<leader>h", "<C-w>h")
-keymap("n", "<leader>l", "<C-w>l")
--- Move windows around
--- TODO: leave to the normal bindings?
-keymap("n", "<leader>sj", "<C-w>J") -- Send to very bottom
-keymap("n", "<leader>sk", "<C-w>K") -- Send to very top 
-keymap("n", "<leader>sh", "<C-w>H") -- Send all the way Left
-keymap("n", "<leader>sl", "<C-w>L") -- Send all the way right 
 -- Resize windows
 keymap("n", "<C-left>", "<C-w><")
 keymap("n", "<C-right>", "<C-w>>")
@@ -60,7 +49,7 @@ keymap("n", "<C-n>", "o<Esc>")
 keymap("n", "<Tab-CR>", "o<Esc>")
 -- Select All
 keymap("n", "<C-a>", "gg<S-v>G")
--- Move a chunk of code  
+-- Move a chunk of code
 keymap("n", "<A-j>", ":m +1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 -- Quick Fix

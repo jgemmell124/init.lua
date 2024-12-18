@@ -11,7 +11,7 @@ return {
   "nvim-tree/nvim-tree.lua",
 
   config = function ()
-    require("nvim-tree").setup({
+    local tree = require("nvim-tree").setup({
       sort = { sorter = "case_sensitive",
       },
       view = {
@@ -20,7 +20,24 @@ return {
       update_focused_file = {
         enable = true,
         update_cwd = true,
-      }
+      },
+      renderer = {
+        icons = {
+          show = {
+            file = true,
+            folder = false,
+            folder_arrow = true,
+            git = true,
+          }
+        },
+        indent_markers = {
+          inline_arrows = true,
+          enable = true,
+
+        }
+      },
     })
+    --[[ if (tree.) ]]
+    vim.keymap.set("n", "<leader>f", ":ExC")
   end
 }
