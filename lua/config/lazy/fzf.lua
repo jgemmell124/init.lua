@@ -8,7 +8,7 @@ return {
   config = function ()
     local fzf = require("fzf-lua")
     fzf.setup({
-      "default", -- profile "telescope", "default", ""
+      "borderless_full", -- profile "telescope", "default", "borderless_full"
       winopts = {
         preview = {
           -- default     = 'bat',           -- override the default previewer?
@@ -16,7 +16,7 @@ return {
           border         = 'border',        -- border|noborder, applies only to
           -- native fzf previewers (bat/cat/git/etc)
           wrap           = 'nowrap',        -- wrap|nowrap
-          hidden         = 'hidden',      -- hidden|nohidden
+          hidden         = 'nohidden',      -- hidden|nohidden
           vertical       = 'down:45%',      -- up|down:size
           horizontal     = 'right:60%',     -- right|left:size
           layout         = 'vertical',          -- horizontal|vertical|flex
@@ -40,7 +40,18 @@ return {
         formatter = "path.filename_first",
         git_icons = true,
         prompt = "Files ❯ ",
-        preview_opts = "nohidden",
+        winopts = {
+          preview = {
+            hidden = "hidden",
+            layout = "vertical",
+            vertical       = 'down:10%',      -- up|down:size
+            horizontal     = 'right:50%',     -- right|left:size
+          },
+          backdrop  = 60,
+          width     = 0.40,            -- window width
+          row       = 0.10,            -- window row position (0=top, 1=bottom)
+          col       = 0.50,            -- window col position (0=left, 1=right)
+        },
         no_header = true,
         cwd_header = false,
         cwd_prompt = false,
@@ -63,5 +74,26 @@ return {
     vim.keymap.set('n', '<leader>pv', fzf.lsp_document_symbols, {})
     vim.keymap.set("n", "<leader>pz", vim.cmd.Fzf, {})
     vim.keymap.set("n", "<C-p>", fzf.git_files, {})
-  end
+    vim.keymap.set("n", "<leader>pz", vim.cmd.Fzf, {})
+    vim.keymap.set("n", "<leader>pd", function ()
+      local opts = {}
+      opts.prompt = "Directories> "
+      opts.winopts = {
+        width     = 0.40,            -- window width
+        row       = 0.10,            -- window row position (0=top, 1=bottom)
+        col       = 0.50,            -- window col position (0=left, 1=right)
+      }
+      opts.fn_transform = function(x)
+        return fzf.utils.ansi_codes.magenta(x)
+      end
+      opts.actions = {
+        ['default'] = function(selected)
+          vim.cmd("e" .. selected[1])
+        end
+      }
+      --[[ fzf.fzf_exec("fdfind --type d", opts) ]]
+      fzf.fzf_exec("find . -type d -not -path **/.git/*", opts)
+    end, {})
+
+  end -- config
 }

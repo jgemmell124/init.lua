@@ -1,4 +1,4 @@
-return {
+local M = {
   "utilyre/barbecue.nvim",
   name = "barbecue",
   version = "*",
@@ -15,3 +15,6 @@ return {
     },
   },
 }
+
+--[[ return M; ]]
+return {}

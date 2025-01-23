@@ -62,6 +62,7 @@ return {
         "lua_ls",
         "rust_analyzer",
         "clangd",
+        "ts_ls",
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -79,6 +80,27 @@ return {
               "--background-index",
               "function-arg-placeholders",
               "clang-tidy"
+            }
+          })
+        end,
+        ["ts_ls"] = function ()
+          local lspconfig = require("lspconfig")
+          lspconfig.ts_ls.setup({
+            capabilities = capabilities,
+            settings = {
+              javascript = {
+                inlayHints = {
+                  -- Inlay Hints
+                  includeInlayParameterNameHints = "literals", -- "all",
+                  includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                  includeInlayFunctionParameterTypeHints = true,
+                  includeInlayVariableTypeHints = false,
+                  includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+                  includeInlayPropertyDeclarationTypeHints = false,
+                  includeInlayFunctionLikeReturnTypeHints = false,
+                  includeInlayEnumMemberValueHints = false,
+                },
+              }
             }
           })
         end,

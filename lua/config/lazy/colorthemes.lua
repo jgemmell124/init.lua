@@ -180,10 +180,25 @@ return {
     config = function()
       require("rose-pine").setup({
         disable_background = false,
+        dim_inactive_windows = false,
+        extend_background_behind_borders = true,
+        palette = {
+          moon = {
+            base = "#242424",
+            surface = "#202020",
+            overlay = "#353535",
+          },
+          main = {
+            base = "#242424",
+            surface = "#202020",
+            overlay = "#353535",
+          }
+        },
         styles = {
           italic = false
         }
       })
+      SetColorTheme("rose_pine")
     end
 
   },
@@ -206,7 +221,7 @@ return {
   {
     "sainnhe/sonokai",
     config = function()
-      SetColorTheme("sonokai")
+      --[[ SetColorTheme("sonokai") ]]
     end
   },
   {
