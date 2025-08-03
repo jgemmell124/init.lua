@@ -26,9 +26,9 @@ return {
         underline = true,
         bold = false,
         italic = {
-          strings = true,
-          emphasis = true,
-          comments = true,
+          strings = false,
+          emphasis = false,
+          comments = false,
           operators = false,
           folds = true,
         },
@@ -38,11 +38,11 @@ return {
         invert_tabline = false,
         invert_intend_guides = false,
         inverse = false, -- invert background for search, diffs, statuslines and errors
-        contrast = 'soft', -- can be "hard", "soft" or empty string
+        contrast = 'hard', -- can be "hard", "soft" or empty string
         dim_inactive = false,
-        transparent_mode = true, -- transparent shows terminal back
+        transparent_mode = false, -- transparent shows terminal back
         palette_overrides = {
-          dark2 = "#2b2b2b",
+          -- dark2 = "#2b2b2b",
         },
         overrides = {
           --[[ Constant = {link="GruvboxPurpleBold"}, ]]
@@ -75,7 +75,6 @@ return {
           --[[ Special = { link = "GruvboxOrangeBold" }, ]]
         }
       })
-      vim.g.gruvbox_italic=1
       vim.o.background = 'dark'
     end
   },
@@ -121,59 +120,9 @@ return {
       vim.g.gruvbox_baby_function_style = "NONE"
       vim.g.gruvbox_baby_variable_style = "NONE"
       vim.g.gruvnox_baby_use_original_palette = 0
+      -- SetColorTheme("gruvbox_baby")
     end
   },
-
-  {
-    "navarasu/onedark.nvim",
-
-    config = function ()
-      require('onedark').setup  {
-        -- Main options --
-        style = 'warmer', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-        transparent = true,  -- Show/hide background
-        term_colors = true, -- Change terminal color as per the selected theme style
-        ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
-        cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
-
-        -- toggle theme style ---
-        toggle_style_key = '<leader>q', -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
-        toggle_style_list = {'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'}, -- List of styles to toggle between
-        -- Change code style ---
-        -- Options are italic, bold, underline, none
-        -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
-        code_style = {
-          comments = 'italic',
-          keywords = 'bold',
-          functions = 'none',
-          strings = 'italic',
-          variables = 'none'
-        },
-
-        -- Lualine options --
-        lualine = {
-          transparent = false, -- lualine center bar transparency
-        },
-
-        -- Custom Highlights --
-        colors = {}, -- Override default colors
-        highlights = {
-          ["@conditional"] = {fmt = 'italic'},
-          ["@keyword."] = {fmt = 'italic'},
-          ["@constant"] = {fmt = 'italic'},
-          ["@type.builtin"] = {fg = '#98C1D9', fmt = 'italic'},
-        }, -- Override highlight groups
-
-        -- Plugins Config --
-        diagnostics = {
-          darker = true, -- darker colors for diagnostic
-          undercurl = true,   -- use undercurl instead of underline for diagnostics
-          background = true,    -- use background color for virtual text
-        },
-      }
-    end
-  },
-
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -184,14 +133,24 @@ return {
         extend_background_behind_borders = true,
         palette = {
           moon = {
-            base = "#242424",
-            surface = "#202020",
-            overlay = "#353535",
+            --[[ base = "#242424", ]]
+            --[[ surface = "#202020", ]]
+            --[[ overlay = "#353535", ]]
+            base = "#262626",
+            surface = "#343434",
+            muted = "#888888",
+            overlay = "#424242",
+            subtle = "#787878"
           },
           main = {
-            base = "#242424",
-            surface = "#202020",
-            overlay = "#353535",
+            --[[ base = "#242424", ]]
+            --[[ surface = "#202020", ]]
+            --[[ overlay = "#353535", ]]
+            base = "#262626",
+            surface = "#343434",
+            muted = "#888888",
+            overlay = "#424242",
+            subtle = "#787878"
           }
         },
         styles = {
@@ -239,5 +198,8 @@ return {
   },
   {
     "Mofiqul/vscode.nvim"
+  },
+  {
+    "vague2k/vague.nvim"
   }
 }

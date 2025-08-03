@@ -9,6 +9,8 @@ vim.g.netrw_fastbrowse = 0
 
 opt.fillchars = {eob = " "} -- remove the '~' at the end of the file
 
+opt.guicursor="i:block"
+
 opt.number=true
 opt.relativenumber=false
 

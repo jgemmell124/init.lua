@@ -1,8 +1,6 @@
-
--- OR setup with some options
-local M =  {
+return {
   "nvim-tree/nvim-tree.lua",
-
+  enabled = true,
   config = function ()
     -- disable netrw at the very start of your init.lua
     vim.g.loaded_netrw = 1
@@ -41,7 +39,3 @@ local M =  {
     vim.keymap.set("n", "<leader>f", ":ExC")
   end
 }
-
---[[ return M; ]]
---
-return {};

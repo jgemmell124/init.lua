@@ -5,6 +5,7 @@ return {
     "nvim-tree/nvim-web-devicons"
   },
 
+  enabled = false,
   config = function ()
     local fzf = require("fzf-lua")
     fzf.setup({
