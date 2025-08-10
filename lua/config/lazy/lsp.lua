@@ -55,70 +55,62 @@ return {
       vim.lsp.protocol.make_client_capabilities(),
       cmp_lsp.default_capabilities())
 
+    vim.lsp.config('*', {
+      capabilities = capabilities,
+    });
+
+    vim.lsp.config('clangd', {
+      capabilities = capabilities,
+      cmd = {
+        "clangd",
+        "--offset-encoding=utf16",
+        "--background-index",
+        "--function-arg-placeholders",
+        "--clang-tidy"
+      }
+    })
+
+    vim.lsp.config('ts_ls', {
+      capabilities = capabilities,
+      settings = {
+        javascript = {
+          inlayHints = {
+            -- Inlay Hints
+            includeInlayParameterNameHints = "literals", -- "all",
+            includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayVariableTypeHints = false,
+            includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+            includeInlayPropertyDeclarationTypeHints = false,
+            includeInlayFunctionLikeReturnTypeHints = false,
+            includeInlayEnumMemberValueHints = false,
+          },
+        }
+      }
+    })
+
+    vim.lsp.config('lua_ls', {
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          runtime = { version = "Lua 5.1" },
+          diagnostics = {
+            globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
+          }
+        }
+      }
+    })
+
     require("fidget").setup({})
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
         "lua_ls",
+        "pyright",
         "rust_analyzer",
         "clangd",
         "ts_ls",
       },
-      handlers = {
-        function(server_name) -- default handler (optional)
-          require("lspconfig")[server_name].setup {
-            capabilities = capabilities
-          }
-        end,
-        ["clangd"] = function ()
-          local lspconfig = require("lspconfig")
-          lspconfig.clangd.setup({
-            capabilities = capabilities,
-            cmd = {
-              "clangd",
-              "--offset-encoding=utf16",
-              "--background-index",
-              "function-arg-placeholders",
-              "clang-tidy"
-            }
-          })
-        end,
-        ["ts_ls"] = function ()
-          local lspconfig = require("lspconfig")
-          lspconfig.ts_ls.setup({
-            capabilities = capabilities,
-            settings = {
-              javascript = {
-                inlayHints = {
-                  -- Inlay Hints
-                  includeInlayParameterNameHints = "literals", -- "all",
-                  includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                  includeInlayFunctionParameterTypeHints = true,
-                  includeInlayVariableTypeHints = false,
-                  includeInlayVariableTypeHintsWhenTypeMatchesName = false,
-                  includeInlayPropertyDeclarationTypeHints = false,
-                  includeInlayFunctionLikeReturnTypeHints = false,
-                  includeInlayEnumMemberValueHints = false,
-                },
-              }
-            }
-          })
-        end,
-        ["lua_ls"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.lua_ls.setup {
-            capabilities = capabilities,
-            settings = {
-              Lua = {
-                runtime = { version = "Lua 5.1" },
-                diagnostics = {
-                  globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
-                }
-              }
-            }
-          }
-        end,
-      }
     })
 
     local cmp_select = { behavior = cmp.SelectBehavior.Select }

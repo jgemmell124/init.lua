@@ -3,6 +3,10 @@ return {
 
   config = function ()
     vim.keymap.set("n", "<leader>b", ":Gitsigns blame<CR>")
+    vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>")
+    vim.keymap.set("n", "<leader>gs", ":Gitsigns stage_hunk<CR>")
+    vim.keymap.set("n", "[g", ":Gitsigns prev_hunk<CR>")
+    vim.keymap.set("n", "]g", ":Gitsigns next_hunk<CR>")
     require('gitsigns').setup {
       signs = {
         add          = { text = '│' },
